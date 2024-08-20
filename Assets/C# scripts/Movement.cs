@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+		public InteractWith interactWith;
 		public float walkSpeed = 5f;
+
+
 
 		float maxSpeed = 10f;
 		float curSpeed;
@@ -15,7 +19,7 @@ public class Movement : MonoBehaviour
 		void Start()
 		{
 			rb = GetComponent<Rigidbody>();
-			// sprintSpeed = walkSpeed + (walkSpeed / 2);
+			
 		}
 
 		void FixedUpdate()
@@ -24,10 +28,15 @@ public class Movement : MonoBehaviour
 			maxSpeed = curSpeed;
 
 			// the movement magic
-			rb.velocity = new Vector3(
-				Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 0.8f),
-				rb.velocity.y,
-				Mathf.Lerp(0, Input.GetAxis("Vertical") * curSpeed, 0.8f)
-			);
+			
+			if (interactWith.inTextBox == false)
+		{
+            rb.velocity = new Vector3(
+                Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 0.8f),
+                rb.velocity.y,
+                Mathf.Lerp(0, Input.GetAxis("Vertical") * curSpeed, 0.8f)
+            );
+        }
+			
 		}
 }
