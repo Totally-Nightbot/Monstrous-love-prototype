@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Kai's artey world 1.unity
+    path: Assets/Scenes/Playground scenes/Kai's artey world 1.unity
     guid: e194588fdcd946a4ebdf95e5e42c208f
   m_configObjects: {}
