@@ -40,7 +40,7 @@ public class InteractWith : MonoBehaviour
           //  Debug.Log("Collider Triggered");
         }
 
-        switch(text)
+        switch(text) // The main text blocks of the chatting stuff
         {
             case 1:
                 talking.text = ("Hey there! sorry we are closed :(");
