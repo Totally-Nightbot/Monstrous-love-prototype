@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InteractWith : MonoBehaviour
 
@@ -10,8 +11,10 @@ public class InteractWith : MonoBehaviour
 {
 
     public bool inTextBox = false;
-    public bool inCollider;
-    
+    private bool inCollider;
+    public List <string> writtenDialog; 
+
+
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
@@ -20,6 +23,7 @@ public class InteractWith : MonoBehaviour
 
     private int text = 1;
     private int dialog = 6;
+    private int i = 0;
 
     private bool choice = false;
 
@@ -38,67 +42,108 @@ public class InteractWith : MonoBehaviour
         {
             EnterInteract();
           //  Debug.Log("Collider Triggered");
+
         }
+        PotentialModularDialog();
 
-        switch(text) // The main text blocks of the chatting stuff
-        {
-            case 1:
-                talking.text = ("Hey there! sorry we are closed :(");
+        //switch (text) // The main text blocks of the chatting stuff (ctrl + K + U to uncomment)
+        //{
+        //    case 1:
+        //        talking.text = (writtenDialog[0]);
 
-                break;
+        //        break;
 
-            case 2:
-                talking.text = ("If you would like to come back another day, then you're welcome to!");
+        //    case 2:
+        //        talking.text = (writtenDialog[1]);
 
-                break;
+        //        break;
 
-            case 3:
-                talking.text = ("But at this moment, you can't come in.");
+        //    case 3:
+        //        talking.text = (writtenDialog[2]);
 
-                break;
+        //        break;
 
-            case 4:
+        //    case 4:
 
-                ButtonActivate();
+        //        ButtonActivate();
 
-                choice = true;
-                option1txt.text = ("wait why is it closed?");
-                option2txt.text = ("ok, have a good day");
+        //        choice = true;
+        //        option1txt.text = ("wait why is it closed?");
+        //        option2txt.text = ("ok, have a good day");
 
-                if (Buttoninteractions.option1clicked == true)
-                {
-                    choice = false;
-                    text++;
-                }
-                else if (Buttoninteractions.option2clicked == true)
-                {
-                    choice = false;
+        //        if (Buttoninteractions.option1clicked == true)
+        //        {
+        //            choice = false;
+        //            text++;
+        //        }
+        //        else if (Buttoninteractions.option2clicked == true)
+        //        {
+        //            choice = false;
 
-                    ButtonDeactiveate();
+        //            ButtonDeactiveate();
 
 
-                    text = dialog;
-                }
-                
-                break;
+        //            text = dialog;
+        //        }
 
-            case 5:
-                ButtonDeactiveate();
+        //        break;
 
-                talking.text = ("well the develo- I mean resturant owners aren't ready for this area to be open");
-                break;
+        //    case 5:
+        //        ButtonDeactiveate();
 
-            case 6:
-                talking.text = ("Sorry for the inconvience, have a good day");
-                break;
+        //        talking.text = (writtenDialog[3]);
+        //        break;
 
-            default:
-                Debug.LogError("out of case area");
+        //    case 6:
+        //        talking.text = (writtenDialog[4]);
+        //        break;
 
-                break;
-        }
+        //    default:
+        //        Debug.LogError("out of case area");
+
+        //        break;
+        //}
 
     }
+
+    void PotentialModularDialog()
+    {
+        if (inCollider == true)
+        {
+            if (Input.GetButtonDown("Submit")) //sets it to false when they press enter and progresses the step number
+            {
+                if ( choice == false)
+                {
+                    
+                    if (text < dialog)
+                    {
+                        i++;
+                       talking.text = writtenDialog[i];
+                        
+                        // Include code to prompt questions 
+                        // Could check if the written dialog equals a certain number then enters the button mode
+                        // button answers would be in another list
+                        // if text equals a certain number then run the button prompts?
+
+                    }
+                    else if (text >= dialog)
+                    {
+                        inTextBox = false;
+                        textBox.gameObject.SetActive(false);
+                        Buttoninteractions.OptionOne.gameObject.SetActive(false);
+                        Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+
+
+                    }
+                }
+
+
+            }
+
+        }
+      }
+    
+
 
     private void EnterInteract()
     {
