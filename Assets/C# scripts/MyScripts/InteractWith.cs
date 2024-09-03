@@ -118,7 +118,9 @@ public class InteractWith : MonoBehaviour
                     if (text < dialog)
                     {
                         i++;
-                       talking.text = writtenDialog[i];
+                        talking.text = writtenDialog[i];
+
+                        
                         
                         // Include code to prompt questions 
                         // Could check if the written dialog equals a certain number then enters the button mode
