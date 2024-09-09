@@ -22,9 +22,9 @@ public class InteractWith : MonoBehaviour
     public TextMeshProUGUI option2txt;
     public Buttoninteractions Buttoninteractions;
 
-    private int text = 1;
-    private int dialog = 6;
-    private int i = 0;
+    public int text = 1;
+    public int dialog = 6;
+    public int i = 0;
     private int choiceNumber = 0;
 
 
@@ -109,105 +109,115 @@ public class InteractWith : MonoBehaviour
     }
 
     void PotentialModularDialog()
+    {
+        if ((Input.GetButtonDown("Submit") && choice == false && inCollider == true && text < dialog) || (Buttoninteractions.option1clicked == true || Buttoninteractions.option2clicked == true) )
         {
-            if (Input.GetButtonDown("Submit") && choice == false && inCollider == true && text < dialog)
+           // Buttoninteractions.option2clicked = false;
+           // Buttoninteractions.option1clicked = false;
+
+            if (i < dialog)
             {
                 i++;
-                talking.text = writtenDialog[i];
-
-
-                if (text == 4) //Change the second number when you want to implament a new button prompt (place it in the space of sequence you want the choice to be)  
-                {
-                    ButtonOptions();
-                    
-                }
-
-
             }
-            else if (text >= dialog)
-            {
-                inTextBox = false;
-                textBox.gameObject.SetActive(false);
-                Buttoninteractions.OptionOne.gameObject.SetActive(false);
-                Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-            }
-        }
-
-
-
-         void EnterInteract()
-        {
-
-            if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
-            {
-                inTextBox = true;
-                textBox.gameObject.SetActive(true);
+            
             talking.text = writtenDialog[i];
-            }
+           
 
-            if (Input.GetButtonDown("Submit") && choice == false && text < dialog) //sets it to false when they press enter and progresses the step number
+            if (text == 4) //Change the second number when you want to implament a new button prompt (place it in the space of sequence you want the choice to be)  
             {
-                text++;
+                ButtonOptions();
+
             }
 
-            else if (text >= dialog)
-            {
-                inTextBox = false;
-                textBox.gameObject.SetActive(false);
-                Buttoninteractions.OptionOne.gameObject.SetActive(false);
-                Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-            }
-        }
-
-        void OnTriggerEnter(Collider other) //when the player is in the collider, set in collider to true 
-        {
-            inCollider = true;
-        }
-
-        void OnTriggerExit(Collider other) //when the player leaves the collider, set in collider to false 
-        {
-            inCollider = false;
 
         }
-
-        void ButtonActivate()
+        else if (text >= dialog)
         {
-            Buttoninteractions.OptionOne.gameObject.SetActive(true);
-            Buttoninteractions.OptionTwo.gameObject.SetActive(true);
-            talking.gameObject.SetActive(false);
-        }
-
-        void ButtonDeactiveate()
-        {
+            inTextBox = false;
+            textBox.gameObject.SetActive(false);
             Buttoninteractions.OptionOne.gameObject.SetActive(false);
             Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-            talking.gameObject.SetActive(true);
         }
+    }
 
-        void ButtonOptions()
+
+
+    void EnterInteract()
+    {
+
+        if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
         {
-            ButtonActivate();
-            choice = true;
-            option1txt.text = ("wait why is it closed?");
-            option2txt.text = ("ok, have a good day");
-
-            if (Buttoninteractions.option1clicked == true)
-            {
-            ButtonDeactiveate();
-            choice = false;
-                text++;
-
-            }
-            else if (Buttoninteractions.option2clicked == true)
-            {
-                choice = false;
-                text++;
-                ButtonDeactiveate();
-                i++;
-            }
+            inTextBox = true;
+            textBox.gameObject.SetActive(true);
+            talking.text = writtenDialog[i];
         }
 
+        if (Input.GetButtonDown("Submit") && choice == false && text < dialog) //sets it to false when they press enter and progresses the step number
+        {
+            text++;
+        }
+        /*
+                else if (text >= dialog)
+                {
+                    inTextBox = false;
+                    textBox.gameObject.SetActive(false);
+                    Buttoninteractions.OptionOne.gameObject.SetActive(false);
+                    Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+                }
+        */
+    }
+
+
+    void ButtonOptions()
+    {
+        ButtonActivate();
+        choice = true;
+        option1txt.text = ("wait why is it closed?");
+        option2txt.text = ("ok, have a good day");
+
+        if (Buttoninteractions.option1clicked == true)
+        {
+            ButtonDeactiveate();
+            text++;
+            choice = false;
+            //Buttoninteractions.option1clicked = false;
+        }
+        else if (Buttoninteractions.option2clicked == true)
+        {
+            ButtonDeactiveate();
+            text++;
+            i++;
+            choice = false;
+            //Buttoninteractions.option2clicked = false;
+        }
+    }
+
+
+    void ButtonActivate()
+    {
+        Buttoninteractions.OptionOne.gameObject.SetActive(true);
+        Buttoninteractions.OptionTwo.gameObject.SetActive(true);
+        talking.gameObject.SetActive(false);
+    }
+
+    void ButtonDeactiveate()
+    {
+        Buttoninteractions.OptionOne.gameObject.SetActive(false);
+        Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+        talking.gameObject.SetActive(true);
+    }
+
+    void OnTriggerEnter(Collider other) //when the player is in the collider, set in collider to true 
+    {
+        inCollider = true;
+    }
+
+    void OnTriggerExit(Collider other) //when the player leaves the collider, set in collider to false 
+    {
+        inCollider = false;
 
     }
+
+}
 
 

@@ -22,14 +22,16 @@ public class Buttoninteractions : MonoBehaviour
 
     void OptionOneClicked()
 	{
-        Debug.Log("buttonclicked number 1");
         option1clicked = true;
+        Debug.Log("buttonclicked number 1");
+        
 	}
 
     void OptionTwoClicked()
     {
-        Debug.Log("buttonclicked number 2");
         option2clicked = true;
+        Debug.Log("buttonclicked number 2");
+       
     }
 
 }

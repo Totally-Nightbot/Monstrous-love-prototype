@@ -1530,13 +1530,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inTextBox: 0
-  inCollider: 0
   writtenDialog:
   - Hey there! sorry we are closed :(
   - If you would like to come back another day, then you're welcome to!
   - But at this moment, you can't come in.
+  - 
   - well the develo- I mean resturant owners aren't ready for this area to be open
-  - Sorry for the inconvience, have a good day
   - Sorry for the inconvience, have a good day
   - Sorry for the inconvience, have a good day
   textBox: {fileID: 211478480}
@@ -1544,6 +1543,9 @@ MonoBehaviour:
   option1txt: {fileID: 527615846}
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 1774314655}
+  text: 1
+  dialog: 6
+  i: 0
 --- !u!135 &1774314650
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1708,6 +1710,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8712599259985340401, guid: c174e6ff4058a1949b7754886686b6c3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23cdc5409874a1c42a7e2d7c8704127d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c174e6ff4058a1949b7754886686b6c3, type: 3}
 --- !u!1 &1998399903
