@@ -25,7 +25,7 @@ public class InteractWith : MonoBehaviour
     public int text = 1;
     public int dialog = 6;
     public int i = 0;
-    private int choiceNumber = 0;
+    
 
 
 
@@ -46,65 +46,65 @@ public class InteractWith : MonoBehaviour
             //  Debug.Log("Collider Triggered");
 
         }
-        PotentialModularDialog();
+      //  PotentialModularDialog();
 
-        //switch (text) // the main text blocks of the chatting stuff (ctrl + k + u to uncomment)
-        //{
-        //    case 1:
-        //        talking.text = (writtenDialog[0]);
+        switch (text) // the main text blocks of the chatting stuff (ctrl + k + u to uncomment)
+        {
+            case 1:
+                talking.text = (writtenDialog[0]);
 
-        //        break;
+                break;
 
-        //    case 2:
-        //        talking.text = (writtenDialog[1]);
+            case 2:
+                talking.text = (writtenDialog[1]);
 
-        //        break;
+                break;
 
-        //    case 3:
-        //        talking.text = (writtenDialog[2]);
+            case 3:
+                talking.text = (writtenDialog[2]);
 
-        //        break;
+                break;
 
-        //    case 4:
+            case 4:
 
-        //        ButtonActivate();
+                ButtonActivate();
 
-        //        choice = true;
-        //        option1txt.text = ("wait why is it closed?");
-        //        option2txt.text = ("ok, have a good day");
+                choice = true;
+                option1txt.text = ("wait why is it closed?");
+                option2txt.text = ("ok, have a good day");
 
-        //        if (Buttoninteractions.option1clicked == true)
-        //        {
-        //            choice = false;
-        //            text++;
-        //        }
-        //        else if (Buttoninteractions.option2clicked == true)
-        //        {
-        //            choice = false;
+                if (Buttoninteractions.option1clicked == true)
+                {
+                    choice = false;
+                    text++;
+                }
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    choice = false;
 
-        //            ButtonDeactiveate();
+                    ButtonDeactiveate();
 
 
-        //            text = dialog;
-        //        }
+                    text = dialog;
+                }
 
-        //        break;
+                break;
 
-        //    case 5:
-        //        ButtonDeactiveate();
+            case 5:
+                ButtonDeactiveate();
 
-        //        talking.text = (writtenDialog[3]);
-        //        break;
+                talking.text = (writtenDialog[3]);
+                break;
 
-        //    case 6:
-        //        talking.text = (writtenDialog[4]);
-        //        break;
+            case 6:
+                talking.text = (writtenDialog[4]);
+                break;
 
-        //    default:
-        //        Debug.LogError("out of case area");
+            default:
+                Debug.LogError("out of case area");
 
-        //        break;
-        //}
+                break;
+        }
 
     }
 
@@ -131,7 +131,7 @@ public class InteractWith : MonoBehaviour
 
 
         }
-        else if (text >= dialog)
+        else if (text > dialog)
         {
             inTextBox = false;
             textBox.gameObject.SetActive(false);
@@ -149,22 +149,21 @@ public class InteractWith : MonoBehaviour
         {
             inTextBox = true;
             textBox.gameObject.SetActive(true);
-            talking.text = writtenDialog[i];
         }
 
         if (Input.GetButtonDown("Submit") && choice == false && text < dialog) //sets it to false when they press enter and progresses the step number
         {
             text++;
         }
-        /*
-                else if (text >= dialog)
-                {
-                    inTextBox = false;
-                    textBox.gameObject.SetActive(false);
-                    Buttoninteractions.OptionOne.gameObject.SetActive(false);
-                    Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-                }
-        */
+
+        else if (Input.GetButtonDown("Submit") && text >= dialog)
+        {
+            inTextBox = false;
+            textBox.gameObject.SetActive(false);
+            Buttoninteractions.OptionOne.gameObject.SetActive(false);
+            Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+        }
+
     }
 
 
