@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
 public class InteractWith : MonoBehaviour
 
 
 {
 
-    public bool inTextBox = false;
-    private bool inCollider;
+    [HideInInspector] public bool inTextBox = false;
+    private bool inCollider = false;
     private bool choice = false;
+    private bool advance = false; 
 
     public List<string> writtenDialog;
+    public List<string> dialogOptions1;
+    public List<string> dialogOptions2;
 
     public GameObject textBox;
     public TextMeshProUGUI talking;
@@ -22,82 +24,116 @@ public class InteractWith : MonoBehaviour
     public TextMeshProUGUI option2txt;
     public Buttoninteractions Buttoninteractions;
 
-    public int text = 1;
-    public int dialog = 6;
-    public int i = 0;
-    
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+   [SerializeField] private int text = 1;
+   [SerializeField] private int dialog = 9;
+   [SerializeField] private int w = 0;
+   [SerializeField] private int q = 0;
 
     // Update is called once per frame
     void Update()
     {
 
-
         if (inCollider == true)
         {
             EnterInteract();
-            //  Debug.Log("Collider Triggered");
-
+          
         }
-      //  PotentialModularDialog();
+     
 
-        switch (text) // the main text blocks of the chatting stuff (ctrl + k + u to uncomment)
+        switch (text) // the main text blocks of the chatting stuff 
         {
-            case 1:
-                talking.text = (writtenDialog[0]);
+            case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
+                talking.text = (writtenDialog[w]);
 
                 break;
 
             case 2:
-                talking.text = (writtenDialog[1]);
+                talking.text = (writtenDialog[w]);
 
                 break;
 
             case 3:
-                talking.text = (writtenDialog[2]);
+                talking.text = (writtenDialog[w]);
 
+                advance = true; // needs to be placed in the case before a question
                 break;
 
-            case 4:
-
+            case 4: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
+                
+                while (advance == true)   
+              {
+                    q++;
+                    advance = false;
+              }
+              
                 ButtonActivate();
 
                 choice = true;
-                option1txt.text = ("wait why is it closed?");
-                option2txt.text = ("ok, have a good day");
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
 
                 if (Buttoninteractions.option1clicked == true)
                 {
-                    choice = false;
+                   ButtonDeactiveate();
                     text++;
                 }
+
                 else if (Buttoninteractions.option2clicked == true)
                 {
-                    choice = false;
-
                     ButtonDeactiveate();
-
-
-                    text = dialog;
+                    text = 6;
+                    w = 4;
                 }
 
                 break;
 
             case 5:
-                ButtonDeactiveate();
 
-                talking.text = (writtenDialog[3]);
+                talking.text = (writtenDialog[w]);
                 break;
 
             case 6:
-                talking.text = (writtenDialog[4]);
+                talking.text = (writtenDialog[w]);
+                break;
+
+            case 7:
+                talking.text = (writtenDialog[w]);
+
+                advance = true; // needs to be placed in the case before a question
+                break;
+
+            case 8: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
+
+                while (advance == true)
+                {
+                    q++;
+                    advance = false;
+                }
+
+                ButtonActivate();
+
+                choice = true;
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
+
+                if (Buttoninteractions.option1clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text++;
+                }
+
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text = 9;
+                    w = 6;
+                }
+
+                break;
+
+            case 9:
+
+                talking.text = (writtenDialog[w]);
                 break;
 
             default:
@@ -108,41 +144,8 @@ public class InteractWith : MonoBehaviour
 
     }
 
-    void PotentialModularDialog()
-    {
-        if ((Input.GetButtonDown("Submit") && choice == false && inCollider == true && text < dialog) || (Buttoninteractions.option1clicked == true || Buttoninteractions.option2clicked == true) )
-        {
-           // Buttoninteractions.option2clicked = false;
-           // Buttoninteractions.option1clicked = false;
 
-            if (i < dialog)
-            {
-                i++;
-            }
-            
-            talking.text = writtenDialog[i];
-           
-
-            if (text == 4) //Change the second number when you want to implament a new button prompt (place it in the space of sequence you want the choice to be)  
-            {
-                ButtonOptions();
-
-            }
-
-
-        }
-        else if (text > dialog)
-        {
-            inTextBox = false;
-            textBox.gameObject.SetActive(false);
-            Buttoninteractions.OptionOne.gameObject.SetActive(false);
-            Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-        }
-    }
-
-
-
-    void EnterInteract()
+    void EnterInteract()// for when the player enters, exits and advances dialog
     {
 
         if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
@@ -154,6 +157,7 @@ public class InteractWith : MonoBehaviour
         if (Input.GetButtonDown("Submit") && choice == false && text < dialog) //sets it to false when they press enter and progresses the step number
         {
             text++;
+            w++;
         }
 
         else if (Input.GetButtonDown("Submit") && text >= dialog)
@@ -164,47 +168,25 @@ public class InteractWith : MonoBehaviour
             Buttoninteractions.OptionTwo.gameObject.SetActive(false);
         }
 
-    }
+    } 
 
-
-    void ButtonOptions()
-    {
-        ButtonActivate();
-        choice = true;
-        option1txt.text = ("wait why is it closed?");
-        option2txt.text = ("ok, have a good day");
-
-        if (Buttoninteractions.option1clicked == true)
-        {
-            ButtonDeactiveate();
-            text++;
-            choice = false;
-            //Buttoninteractions.option1clicked = false;
-        }
-        else if (Buttoninteractions.option2clicked == true)
-        {
-            ButtonDeactiveate();
-            text++;
-            i++;
-            choice = false;
-            //Buttoninteractions.option2clicked = false;
-        }
-    }
-
-
-    void ButtonActivate()
+    void ButtonActivate()// shows the player the button options 
     {
         Buttoninteractions.OptionOne.gameObject.SetActive(true);
         Buttoninteractions.OptionTwo.gameObject.SetActive(true);
         talking.gameObject.SetActive(false);
-    }
+    } 
 
-    void ButtonDeactiveate()
+    void ButtonDeactiveate()// hides the button options from the player
     {
+        Buttoninteractions.option1clicked = false;
+        Buttoninteractions.option2clicked = false;
+        choice = false;
+
         Buttoninteractions.OptionOne.gameObject.SetActive(false);
         Buttoninteractions.OptionTwo.gameObject.SetActive(false);
         talking.gameObject.SetActive(true);
-    }
+    } 
 
     void OnTriggerEnter(Collider other) //when the player is in the collider, set in collider to true 
     {

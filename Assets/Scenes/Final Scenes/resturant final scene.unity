@@ -2693,16 +2693,25 @@ MonoBehaviour:
   - But at this moment, you can't come in.
   - well the develo- I mean resturant owners aren't ready for this area to be open
   - Sorry for the inconvience, have a good day
-  - 
-  - 
+  - Go away
+  - 'yeah bitch boy '
+  dialogOptions1:
+  - '{ignore}'
+  - 'Why is it closed? '
+  - Fuck you
+  dialogOptions2:
+  - '{ignore}'
+  - Thats ok i'll come back later
+  - :(
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
   option1txt: {fileID: 527615846}
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 1774314655}
   text: 1
-  dialog: 6
-  i: 0
+  dialog: 8
+  w: 0
+  q: 0
 --- !u!135 &1774314650
 SphereCollider:
   m_ObjectHideFlags: 0
