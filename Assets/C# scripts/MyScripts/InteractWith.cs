@@ -25,11 +25,12 @@ public class InteractWith : MonoBehaviour
     public Buttoninteractions Buttoninteractions;
 
    [SerializeField] private int text = 1;
-   [SerializeField] private int dialog = 9;
    [SerializeField] private int w = 0;
    [SerializeField] private int q = 0;
 
-    // Update is called once per frame
+   [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
+
+    
     void Update()
     {
 
@@ -81,8 +82,8 @@ public class InteractWith : MonoBehaviour
                 else if (Buttoninteractions.option2clicked == true)
                 {
                     ButtonDeactiveate();
-                    text = 6;
-                    w = 4;
+                    text = 6; // Where you want the second option to begin from 
+                    w = 4; // Where in the dialog inventory to go from
                 }
 
                 break;
@@ -99,10 +100,10 @@ public class InteractWith : MonoBehaviour
             case 7:
                 talking.text = (writtenDialog[w]);
 
-                advance = true; // needs to be placed in the case before a question
+                advance = true; 
                 break;
 
-            case 8: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
+            case 8: 
 
                 while (advance == true)
                 {
@@ -135,6 +136,8 @@ public class InteractWith : MonoBehaviour
 
                 talking.text = (writtenDialog[w]);
                 break;
+
+                // add new stuff here
 
             default:
                 Debug.LogError("out of case area");

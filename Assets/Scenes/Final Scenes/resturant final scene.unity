@@ -2709,7 +2709,7 @@ MonoBehaviour:
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 1774314655}
   text: 1
-  dialog: 8
+  dialog: 9
   w: 0
   q: 0
 --- !u!135 &1774314650
