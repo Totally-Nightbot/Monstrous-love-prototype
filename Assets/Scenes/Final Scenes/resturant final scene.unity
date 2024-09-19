@@ -898,7 +898,7 @@ MonoBehaviour:
   resume: {fileID: 2055990459}
   exit: {fileID: 1447729858}
   back: {fileID: 1606941359}
-  phone: {fileID: 1396540184}
+  phone: {fileID: 1936543458}
   settingsMenu: {fileID: 189412429}
 --- !u!1 &777538454
 GameObject:
@@ -2627,7 +2627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1936543459
 RectTransform:
   m_ObjectHideFlags: 0
