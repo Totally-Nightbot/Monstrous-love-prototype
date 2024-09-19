@@ -37,6 +37,8 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Erosion: 0
+    - _VertexOffsetAmount: 0.04
     - _VoronoiSpeed: 1
     m_Colors:
     - _RippleColour: {r: 0.16981131, g: 0.106532566, b: 0.113563545, a: 1}
