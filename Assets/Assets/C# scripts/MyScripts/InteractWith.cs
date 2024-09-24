@@ -82,7 +82,7 @@ public class InteractWith : MonoBehaviour
                 else if (Buttoninteractions.option2clicked == true)
                 {
                     ButtonDeactiveate();
-                    text = 6; // Where you want the second option to begin from 
+                    text = 6; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
                     w = 4; // Where in the dialog inventory to go from
                 }
 
@@ -157,7 +157,7 @@ public class InteractWith : MonoBehaviour
             textBox.gameObject.SetActive(true);
         }
 
-        if (Input.GetButtonDown("Submit") && choice == false && text < dialog) //sets it to false when they press enter and progresses the step number
+        if (Input.GetButtonDown("Submit") && choice == false && text < dialog)//sets it to false when they press enter and progresses the step number
         {
             text++;
             w++;
