@@ -1436,8 +1436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _img: {fileID: 1407173743}
-  _x: 0
-  _y: 0
+  _x: 0.01
+  _y: 0.01
 --- !u!114 &1407173743
 MonoBehaviour:
   m_ObjectHideFlags: 0
