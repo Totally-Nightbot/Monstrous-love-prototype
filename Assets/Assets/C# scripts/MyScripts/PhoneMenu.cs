@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIinteractions : MonoBehaviour
+public class PhoneMenu: MonoBehaviour
 {
     public Button settings;
     public Button resume;
@@ -14,7 +14,7 @@ public class UIinteractions : MonoBehaviour
     public GameObject settingsMenu;
 
     private bool inSettings = false;
-    private bool inPhone = false;
+    public bool inPhone = false;
 
     void Start() //when these buttons are clicked they send out a message to the diffrent recivers 
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+	public PhoneMenu phoneMenu;
 		public InteractWith interactWith;
 		public float walkSpeed = 5f;
 
@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
 
 			// the movement magic
 			
-			if (interactWith.inTextBox == false)
+			if (interactWith.inTextBox == false && phoneMenu.inPhone == false)
 		{
             rb.velocity = new Vector3(
                 Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 0.8f),

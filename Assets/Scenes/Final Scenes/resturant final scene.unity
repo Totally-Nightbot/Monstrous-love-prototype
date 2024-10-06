@@ -1246,6 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad29944c77ee3b742bd3f22e1657138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phoneMenu: {fileID: 722871719}
   interactWith: {fileID: 1774314649}
   walkSpeed: 5
 --- !u!54 &722871715
@@ -1262,7 +1263,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &722871716
 CapsuleCollider:
@@ -1346,6 +1347,7 @@ MonoBehaviour:
   back: {fileID: 1606941359}
   phone: {fileID: 1936543458}
   settingsMenu: {fileID: 189412429}
+  inPhone: 0
 --- !u!1 &728592332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7789571202078169714, guid: c174e6ff4058a1949b7754886686b6c3, type: 3}
@@ -1626,6 +1628,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &915824246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4015205668332403580, guid: 65d9853f159a81f4cbc4a55b67edddeb, type: 3}
+  m_PrefabInstance: {fileID: 81941171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &945408557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 957304416935650497, guid: 88f18dd133904f341b8efd2f99a03a79, type: 3}
@@ -3852,9 +3859,7 @@ MonoBehaviour:
   option1txt: {fileID: 527615846}
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 1774314655}
-  text: 1
-  w: 0
-  q: 0
+  floatingBubble: {fileID: 915824246}
   dialog: 9
 --- !u!135 &1774314650
 SphereCollider:

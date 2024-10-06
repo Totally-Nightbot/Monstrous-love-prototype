@@ -23,10 +23,11 @@ public class InteractWith : MonoBehaviour
     public TextMeshProUGUI option1txt;
     public TextMeshProUGUI option2txt;
     public Buttoninteractions Buttoninteractions;
+    public GameObject floatingBubble;
 
-   [SerializeField] private int text = 1;
-   [SerializeField] private int w = 0;
-   [SerializeField] private int q = 0;
+  private int text = 1;
+  private int w = 0;
+  private int q = 0;
 
    [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
 
@@ -37,9 +38,13 @@ public class InteractWith : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
-          
+            
         }
-     
+
+        if (text >= dialog)
+        {
+            floatingBubble.SetActive(false);
+        }
 
         switch (text) // the main text blocks of the chatting stuff 
         {
@@ -153,6 +158,7 @@ public class InteractWith : MonoBehaviour
 
         if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
         {
+            floatingBubble.SetActive(false);
             inTextBox = true;
             textBox.gameObject.SetActive(true);
         }
@@ -199,7 +205,16 @@ public class InteractWith : MonoBehaviour
     void OnTriggerExit(Collider other) //when the player leaves the collider, set in collider to false 
     {
         inCollider = false;
+        inTextBox = false;
 
+        if( !(text >= dialog))
+        {
+            floatingBubble.SetActive(true);
+        }
+
+        textBox.gameObject.SetActive(false);
+        Buttoninteractions.OptionOne.gameObject.SetActive(false);
+        Buttoninteractions.OptionTwo.gameObject.SetActive(false);
     }
 
     // Code written by Maxolotl (Jayden Cassar) 
