@@ -8,6 +8,7 @@ public class InteractWith : MonoBehaviour
 
 
 {
+    public Cretura cretura;
 
     [HideInInspector] public bool inTextBox = false;
     private bool inCollider = false;
@@ -96,6 +97,8 @@ public class InteractWith : MonoBehaviour
             case 5:
 
                 talking.text = (writtenDialog[w]);
+                cretura.shock.SetActive(true); //To change a character's expression use the format NAME.EMOTION.Setactive(true) for the one you want to be active
+                cretura.neutral.SetActive(false); //Use NAME.EMOTION.setactive(false) for the one you want to deactivate
                 break;
 
             case 6:
@@ -124,6 +127,8 @@ public class InteractWith : MonoBehaviour
 
                 if (Buttoninteractions.option1clicked == true)
                 {
+                    cretura.nervous.SetActive(true);
+                    cretura.shock.SetActive(false);
                     ButtonDeactiveate();
                     text++;
                 }
