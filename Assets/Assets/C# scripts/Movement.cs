@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 	public PhoneMenu phoneMenu;
-		public InteractWith interactWith;
+		public Spinch_intro interactWith;
 		public float walkSpeed = 5f;
 
 
