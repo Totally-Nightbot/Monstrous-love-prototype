@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cordysit
+  m_Name: IMG_6028
   m_Shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f5348d8a8075a6544b5c3a93e4db6df0, type: 3}
+        m_Texture: {fileID: 2800000, guid: b548591358b49e34abd2c287fb9c278e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -82,7 +82,6 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.7301013, b: 0.3443396, a: 1}
+    - _Color: {r: 0.4433962, g: 0.34091312, b: 0.34091312, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Specular: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
