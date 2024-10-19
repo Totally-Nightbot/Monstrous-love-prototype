@@ -16035,7 +16035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6365061517193807165}
   m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
-  m_LocalPosition: {x: 15.05, y: 1.03, z: 6.78}
+  m_LocalPosition: {x: 15.04, y: 1.03, z: 0.26}
   m_LocalScale: {x: 0.84778434, y: 1.0050905, z: 0.8939589}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16093,7 +16093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneMenu: {fileID: 6365061517193807162}
-  interactWith: {fileID: 7213965475269775724}
+  interactWith: {fileID: 0}
   walkSpeed: 5
 --- !u!222 &6365061517213379021
 CanvasRenderer:
@@ -17114,6 +17114,15 @@ MonoBehaviour:
   writtenDialog:
   - "good morning Cretura, what a lovely morning it is wouldn\u2019t you agree?"
   - "I see you\u2019re as quiet as ever aren\u2019t you, no matter! "
+  - I have a proposition for you
+  - you wanted to go to the human world once right?
+  - ..
+  - come now, no need to be shy, there is no need to worry about it anymore
+  - "I\u2019ve managed to set up a \u2018date\u2019 as they call it for you with
+    two different people, humans"
+  - " I know you\u2019ve wanted to \u2018become\u2019 human for arguably centuries
+    so I have Acquired this opportunity for you"
+  - 'Now, decide which companion you would like to have a marvellous adventure with!  '
   dialogOptions1:
   - 
   - ......
@@ -17126,7 +17135,7 @@ MonoBehaviour:
   option2txt: {fileID: 6365061517239839493}
   Buttoninteractions: {fileID: 2661337944906972931}
   floatingBubble: {fileID: 4048074702986086578}
-  dialog: 3
+  dialog: 9
 --- !u!23 &7230465526358445741
 MeshRenderer:
   m_ObjectHideFlags: 0
