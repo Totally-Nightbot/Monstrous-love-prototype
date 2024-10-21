@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 
 
 public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    Transform parentToReturnTo = null;
+   [HideInInspector] public Transform parentToReturnTo = null;
+     public enum Slot { HAT, CHEST};
+    public Slot typeOfClothing = Slot.HAT;
+
+
   public void OnBeginDrag(PointerEventData eventdata)
     {
         Debug.Log("onBeginDrag");
@@ -29,5 +34,7 @@ public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         Debug.Log("onEndDrag");
         this.transform.SetParent(parentToReturnTo);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+
     }
 }
