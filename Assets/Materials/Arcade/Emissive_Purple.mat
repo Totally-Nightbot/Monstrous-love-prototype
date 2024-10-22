@@ -18,7 +18,7 @@ Material:
   - _IS_OUTLINE_CLIPPING_NO
   - _OUTLINE_NML
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
@@ -486,11 +486,11 @@ Material:
     - _BaseColor: {r: 0.72466147, g: 0.25943398, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.72466147, g: 0.25943395, b: 1, a: 1}
+    - _Color: {r: 0.48107275, g: 0.14417945, b: 0.6792453, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _EmissionColor: {r: 0.57354754, g: 0.23113209, b: 1, a: 1}
+    - _EmissionColor: {r: 1.3532486, g: 0.6668986, b: 5.2363887, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
