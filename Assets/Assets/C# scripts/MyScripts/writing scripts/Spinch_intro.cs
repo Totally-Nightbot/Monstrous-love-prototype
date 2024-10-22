@@ -8,18 +8,22 @@ public class Spinch_intro : MonoBehaviour
 
 
 {
+    [Header("sprites")]
     public Cretura cretura;
     public Spinch spinch;
 
     [HideInInspector] public bool inTextBox = false;
     private bool inCollider = false;
     private bool choice = false;
-    private bool advance = false; 
+    private bool advance = false;
 
+    [Header("Dialog")]
     public List<string> writtenDialog;
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
+    [Header("OtherItems")]
+    public GameObject dateUI;
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
@@ -31,7 +35,7 @@ public class Spinch_intro : MonoBehaviour
   private int w = 0;
   private int q = 0;
 
-   [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
+   [SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
 
     
     void Update()
@@ -162,8 +166,13 @@ public class Spinch_intro : MonoBehaviour
                 spinch.neutral.SetActive(false);
                 cretura.nervous.SetActive(true);
                 cretura.neutral.SetActive(false);
+                advance = true;
                 break;
 
+            case 11:
+               dateUI.gameObject.SetActive(true);
+
+                break;
 
             default:
                 Debug.LogError("out of case area");
@@ -239,6 +248,8 @@ public class Spinch_intro : MonoBehaviour
         Buttoninteractions.OptionOne.gameObject.SetActive(false);
         Buttoninteractions.OptionTwo.gameObject.SetActive(false);
     }
+
+
 
     // Code written by Maxolotl (Jayden Cassar) 
     /*

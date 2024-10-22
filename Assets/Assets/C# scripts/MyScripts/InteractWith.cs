@@ -8,17 +8,20 @@ public class InteractWith : MonoBehaviour
 
 
 {
+    [Header("sprites")]
     public Cretura cretura;
 
     [HideInInspector] public bool inTextBox = false;
     private bool inCollider = false;
     private bool choice = false;
-    private bool advance = false; 
+    private bool advance = false;
 
+    [Header("Dialog")]
     public List<string> writtenDialog;
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
+    [Header("OtherItems")]
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
