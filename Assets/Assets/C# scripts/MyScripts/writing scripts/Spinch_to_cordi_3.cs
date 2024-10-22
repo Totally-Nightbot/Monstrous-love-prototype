@@ -28,7 +28,7 @@ private int text = 1;
 private int w = 0;
 private int q = 0;
 
-[SerializeField] private int dialog = 0; //Make sure this matches the amount of cases
+[SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
 
 
 void Update()
@@ -52,8 +52,9 @@ void Update()
             talking.text = (writtenDialog[w]);
             advance = true;
             spinch.happy.SetActive(true);
-            spinch.neutral.SetActive(true);
-
+            spinch.neutral.SetActive(false);
+            cretura.sad.SetActive(true);
+            cretura.neutral.SetActive(false);
 
             break;
 
@@ -109,7 +110,10 @@ void Update()
         case 5:
             talking.text = (writtenDialog[w]);
             advance = true;
-        
+                spinch.neutral.SetActive(true);
+                spinch.happy.SetActive(false);
+                cretura.neutral.SetActive(true);
+                cretura.sad.SetActive(false);
             break;
 
         case 6:
@@ -123,66 +127,73 @@ void Update()
         case 7:
             talking.text = (writtenDialog[w]);
             advance = true;
-            
-
+                spinch.neutral.SetActive(true);
+                spinch.happy.SetActive(false);
+                cretura.shock.SetActive(true);
+                cretura.neutral.SetActive(false);
             break;
 
 
 
 
+        case 8:
+            talking.text = (writtenDialog[w]);
+              
+                while (advance == true)
+                {
+                    q++;
+                    advance = false;
+                }
+
+                ButtonActivate();
+
+                choice = true;
+
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
+
+                if (Buttoninteractions.option1clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text = 11; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    w = 6; // Where in the dialog inventory to go from   //might be w9 instead 
+                }
+
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text++;
+                }
+
+
+
+
+                break;
+
         case 9:
             talking.text = (writtenDialog[w]);
             advance = true;
-
-           
+            spinch.shock.SetActive(true);
+            spinch.neutral.SetActive(false);
 
             break;
 
         case 10:
             talking.text = (writtenDialog[w]);
             advance = true;
-
+            spinch.happy.SetActive(true);
+            spinch.shock.SetActive(false);
 
             break;
 
         case 11:
             talking.text = (writtenDialog[w]);
             advance = true;
-
-
+                spinch.happy.SetActive(true);
+                spinch.shock.SetActive(false); //this might be needed idk hopefully
             break;
 
-        case 12:
-            talking.text = (writtenDialog[w]);
-            advance = true;
-           
-            break;
-
-        case 13:
-            talking.text = (writtenDialog[w]);
-            advance = true;
-           
-
-            break;
-
-        case 14:
-            talking.text = (writtenDialog[w]);
-            advance = true;
-            spinch.happy.SetActive(false);
-            spinch.neutral.SetActive(true);
-
-            break;
-
-        case 15:
-            talking.text = (writtenDialog[w]);
-            advance = true;
-
-
-            spinch.happy.SetActive(true);
-            spinch.neutral.SetActive(false);
-            break;
-
-            //transition to resturant
+            //players look around for plants, which are on different scripts :)
 
 
 

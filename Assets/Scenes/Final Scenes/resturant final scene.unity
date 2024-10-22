@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.033023104, g: 0.025527336, b: 0.01527917, a: 1}
+  m_IndirectSpecularColor: {r: 0.03302308, g: 0.025527326, b: 0.015279179, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -589,6 +589,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.105962105, y: 0.13626789, z: 0.07905664}
   m_Center: {x: -0.011293013, y: -0.000000012992567, z: -0.16175067}
+--- !u!1 &151784453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151784454}
+  - component: {fileID: 151784455}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &151784454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151784453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 3.79, z: 0.09}
+  m_LocalScale: {x: 0.11999999, y: 0.11999999, z: 0.11999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 725266106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151784455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151784453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379806942ce7206499bdef23b1ad7b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 3788596747212586145, guid: be572583900a3d74f86018d6fa959143, type: 3}
+  displayOffset: {x: 0, y: 1.05, z: 0}
 --- !u!1 &160515100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1682,188 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387146171}
   m_CullTransparentMesh: 1
+--- !u!1 &406011118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406011119}
+  - component: {fileID: 406011125}
+  - component: {fileID: 406011124}
+  - component: {fileID: 406011123}
+  - component: {fileID: 406011122}
+  - component: {fileID: 406011121}
+  - component: {fileID: 406011120}
+  m_Layer: 0
+  m_Name: Test NPC  Plant1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406011119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
+  m_LocalPosition: {x: 46.83, y: 4.41, z: 12.65}
+  m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 683343395}
+  m_Father: {fileID: 4160506864721958252}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90.061, z: 0}
+--- !u!114 &406011120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf45605b53a6604fb7c97c810d3ce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionOne: {fileID: 1734949132}
+  OptionTwo: {fileID: 2003148212}
+  option1clicked: 0
+  option2clicked: 0
+--- !u!114 &406011121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de7cd9446f371248afb2f577b9f7bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 0}
+  spinch: {fileID: 0}
+  inTextBox: 0
+  writtenDialog:
+  - 'SHHHHH! '
+  - "Don\u2019t make another move, comrade! We\u2019ll get found out and this post
+    will be BUSTED! "
+  - Act. Natural.
+  - '[You act as natural as you can possibly conceive: pretending you are a tree,
+    gently swaying in the wind.'
+  - Despite how calm and graceful you feel, you see an onlooking couple stare at
+    you before hurriedly walking into the restaurant.]
+  - "Wh\u2014what are you DOING?! I said act NATURAL. Ugh. Fine. I\u2019ll give you
+    the intel before you take MY cover down with yours. "
+  - '[The plant sighs. You have no idea how it did that.]'
+  - Well, since you insist..
+  - Listen close.
+  - "I\u2019ve been posted around the outskirts, some places that Cordero seems to
+    hang out a lot. I remember a conversation with \u2018m and a friend\u2026"
+  - They like anything with goat in it.
+  - "Goats\u2026 My mortal enemy\u2026"
+  - "\u2026 "
+  - "Now, I\u2019ve told you all I\u2019ve scouted."
+  - "Talk to my companions, quick! We\u2019re required elsewhere later for Spinch
+    Her Excellency. "
+  - ' GO! We CANNOT keep her waiting! '
+  dialogOptions1:
+  - 
+  - '[Act.. natural?]'
+  dialogOptions2:
+  - 
+  - ' [Continue talking to the paranoid plant]'
+  textBox: {fileID: 0}
+  talking: {fileID: 0}
+  option1txt: {fileID: 0}
+  option2txt: {fileID: 0}
+  Buttoninteractions: {fileID: 0}
+  floatingBubble: {fileID: 0}
+  dialog: 18
+--- !u!135 &406011122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.8294601
+  m_Center: {x: -2.9997956e-11, y: 0, z: -0.8294605}
+--- !u!136 &406011123
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &406011124
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 42ef138de99b97246905c211a5e72366, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &406011125
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406011118}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &406979651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,6 +2783,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639666553}
   m_CullTransparentMesh: 1
+--- !u!1 &661338983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661338984}
+  - component: {fileID: 661338985}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661338984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661338983}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 3.79, z: 0.09}
+  m_LocalScale: {x: 0.11999999, y: 0.11999999, z: 0.11999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1112867313}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661338985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661338983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379806942ce7206499bdef23b1ad7b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 3788596747212586145, guid: be572583900a3d74f86018d6fa959143, type: 3}
+  displayOffset: {x: 0, y: 1.05, z: 0}
+--- !u!1 &683343394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 683343395}
+  - component: {fileID: 683343396}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &683343395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683343394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 3.79, z: 0.09}
+  m_LocalScale: {x: 0.11999999, y: 0.11999999, z: 0.11999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 406011119}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683343396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683343394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379806942ce7206499bdef23b1ad7b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 3788596747212586145, guid: be572583900a3d74f86018d6fa959143, type: 3}
+  displayOffset: {x: 0, y: 1.05, z: 0}
 --- !u!1 &701335885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,8 +3134,8 @@ GameObject:
   - component: {fileID: 722871717}
   - component: {fileID: 722871716}
   - component: {fileID: 722871715}
-  - component: {fileID: 722871714}
   - component: {fileID: 722871719}
+  - component: {fileID: 722871720}
   m_Layer: 0
   m_Name: Test player
   m_TagString: Untagged
@@ -2838,21 +3158,6 @@ Transform:
   m_Father: {fileID: 8214546031706031515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.061, z: 0}
---- !u!114 &722871714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722871712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad29944c77ee3b742bd3f22e1657138f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phoneMenu: {fileID: 722871719}
-  interactWith: {fileID: 2975361500141374083}
-  walkSpeed: 5
 --- !u!54 &722871715
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2952,6 +3257,204 @@ MonoBehaviour:
   phone: {fileID: 1936543458}
   settingsMenu: {fileID: 189412429}
   inPhone: 0
+--- !u!114 &722871720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722871712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2cd1a0feb6263c46bd98659f3c82102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phoneMenu: {fileID: 722871719}
+  plc: {fileID: 406011121}
+  plc2: {fileID: 1112867314}
+  spc3: {fileID: 725266113}
+  cm: {fileID: 1913144887}
+  walkSpeed: 5
+--- !u!1 &725266105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725266106}
+  - component: {fileID: 725266112}
+  - component: {fileID: 725266111}
+  - component: {fileID: 725266110}
+  - component: {fileID: 725266109}
+  - component: {fileID: 725266107}
+  - component: {fileID: 725266113}
+  m_Layer: 0
+  m_Name: Test NPC (spinch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725266106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
+  m_LocalPosition: {x: 5.24, y: 4.41, z: 15.37}
+  m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 151784454}
+  m_Father: {fileID: 4160506864721958252}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 90.061, z: 0}
+--- !u!114 &725266107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf45605b53a6604fb7c97c810d3ce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionOne: {fileID: 1734949132}
+  OptionTwo: {fileID: 2003148212}
+  option1clicked: 0
+  option2clicked: 0
+--- !u!135 &725266109
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.8294601
+  m_Center: {x: -2.9997956e-11, y: 0, z: -0.8294605}
+--- !u!136 &725266110
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &725266111
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 42ef138de99b97246905c211a5e72366, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &725266112
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &725266113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725266105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea64b16b5419b34aacb590b3cff8fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 406979653}
+  spinch: {fileID: 464015906}
+  inTextBox: 0
+  writtenDialog:
+  - 'We have arrived! Quite a fine establishment, oh-so similar to one we visited
+    back when you were once the size of the leaf bestowed upon my head.. How time
+    flies, does it not? '
+  - '  Sure, I may not be as finely aged as you are, but I certainly have spent more
+    of my time perusing the human world.'
+  - " I\u2019m not quite sure if they have figured out how to put human restaurants
+    beyond the mortal plane.. but, let us head inside! I have something to show you."
+  - " Now, you might be wondering why I am still here in your presence instead of
+    just leaving it to you, well\u2026"
+  - "I may or may not have \u2018planted\u2019 some \u2018security\u2019 around your
+    date Cordero for the last few days in the case you wanted to go out with them.
+    My sources say they are here now, actually! "
+  - "Do you see those completely normal and not visually distinct plants over there?
+    Try talking to them. I believe you\u2019ll get some important information about
+    your date. "
+  - 'Of course not! '
+  - The plants did.
+  - 'And with that, I bid you farewell. Have a wondrous time on your outing! '
+  dialogOptions1:
+  - 
+  - " But you\u2019re not older than me.. "
+  - Did you stalk my date?
+  dialogOptions2:
+  - 
+  - " I wonder if it\u2019s the same chain we have back at home."
+  - Perfectly reasonable.
+  textBox: {fileID: 0}
+  talking: {fileID: 0}
+  option1txt: {fileID: 0}
+  option2txt: {fileID: 0}
+  Buttoninteractions: {fileID: 0}
+  floatingBubble: {fileID: 0}
+  dialog: 11
 --- !u!1 &728592332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7789571202078169714, guid: c174e6ff4058a1949b7754886686b6c3, type: 3}
@@ -4248,6 +4751,187 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.027595833, y: 0.19644928, z: 0.055077314}
   m_Center: {x: 0.00000005945821, y: 0.000000016402266, z: -0.089472726}
+--- !u!1 &1112867312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112867313}
+  - component: {fileID: 1112867319}
+  - component: {fileID: 1112867318}
+  - component: {fileID: 1112867317}
+  - component: {fileID: 1112867316}
+  - component: {fileID: 1112867315}
+  - component: {fileID: 1112867314}
+  m_Layer: 0
+  m_Name: Test NPC  Plant2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112867313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
+  m_LocalPosition: {x: 7.49, y: 4.41, z: 12.84}
+  m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 661338984}
+  m_Father: {fileID: 4160506864721958252}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90.061, z: 0}
+--- !u!114 &1112867314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d85c1a43936a54bb08766d2abb22a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 406979653}
+  spinch: {fileID: 0}
+  inTextBox: 0
+  writtenDialog:
+  - '[You approach slowly, and about as casual as you can when striking up hushed
+    conversation with an inanimate object.]'
+  - "You? You\u2019re the field confidant I\u2019ve been tasked with delivering information
+    to?"
+  - "[The plant\u2019s leaves shudder slightly in disgust.]"
+  - Fine.
+  - "I was tasked with acting as a house plant in the target\u2019s living quarters."
+  - ' It was a rough few weeks out in the field, I was sent in a task force with
+    some of the best.. '
+  - I was the only survivor.
+  - "It was warfare out there, with no rations to spare.. I watched my friends die
+    without a lick of water or sunlight for days\u2026"
+  - "I\u2019ll never forget the dying words of my comrade as I sat in my pot by the
+    windowsill next to them\u2026"
+  - "\u201CW\u2026water your damn plants\u2026\u201D"
+  - ' [A moment of silence passes in respect of the fallen plant.] '
+  - Cordero seems to be the overly confident type. Almost to a fault, considering
+    the outcomes of the field mission.
+  - 'You could use that to your advantage: a stray compliment or two will certainly
+    help you on your date.'
+  - "They also seem to enjoy talking about mysterious creatures and beasts, like
+    yourself. While that\u2019ll be something you can use with your undoubtedly expert
+    knowledge, I\u2019d advise you to be careful."
+  - "Don\u2019t blow your cover for Spinch Her Excellency."
+  - 'Good luck, field agent. Cordero is in the dining room. '
+  dialogOptions1: []
+  dialogOptions2: []
+  textBox: {fileID: 0}
+  talking: {fileID: 0}
+  option1txt: {fileID: 0}
+  option2txt: {fileID: 0}
+  Buttoninteractions: {fileID: 0}
+  floatingBubble: {fileID: 0}
+  dialog: 16
+--- !u!114 &1112867315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf45605b53a6604fb7c97c810d3ce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionOne: {fileID: 1734949132}
+  OptionTwo: {fileID: 2003148212}
+  option1clicked: 0
+  option2clicked: 0
+--- !u!135 &1112867316
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.8294601
+  m_Center: {x: -2.9997956e-11, y: 0, z: -0.8294605}
+--- !u!136 &1112867317
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1112867318
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 42ef138de99b97246905c211a5e72366, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1112867319
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112867312}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1125613198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5305,6 +5989,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581995821}
   m_CullTransparentMesh: 1
+--- !u!1 &1595318890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595318891}
+  - component: {fileID: 1595318892}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595318891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595318890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 3.79, z: 0.09}
+  m_LocalScale: {x: 0.11999999, y: 0.11999999, z: 0.11999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1913144886}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595318892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595318890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379806942ce7206499bdef23b1ad7b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 3788596747212586145, guid: be572583900a3d74f86018d6fa959143, type: 3}
+  displayOffset: {x: 0, y: 1.05, z: 0}
 --- !u!1 &1606941355
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,6 +7546,247 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882056454}
   m_CullTransparentMesh: 1
+--- !u!1 &1913144885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913144886}
+  - component: {fileID: 1913144892}
+  - component: {fileID: 1913144891}
+  - component: {fileID: 1913144890}
+  - component: {fileID: 1913144889}
+  - component: {fileID: 1913144888}
+  - component: {fileID: 1913144887}
+  m_Layer: 0
+  m_Name: Test NPC  Cordero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1913144886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
+  m_LocalPosition: {x: 88.01, y: 4.41, z: 5.57}
+  m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1595318891}
+  m_Father: {fileID: 4160506864721958252}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 90.061, z: 0}
+--- !u!114 &1913144887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f24db53934c134498f6c1b42fe9bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 406979653}
+  cordero: {fileID: 333819469}
+  inTextBox: 0
+  writtenDialog:
+  - " Oh, hey! It\u2019s you. Great to finally see you in person."
+  - 'Have a seat! '
+  - '[You grab the seat in front of you with a pair of gooey limbs. Without any further
+    direction, you simply lift and hold it in your arms.]'
+  - "[You take hold of the chair and begin to take it with you, it\u2019s wooden
+    legs dragging loudly across the dining room floor.]"
+  - "\u2026"
+  - "HAH! No\u2014 just sit down!"
+  - "Oh, you love to take things so literally, don\u2019t you?"
+  - '[You wipe your non-existent brow as you place the chair back and sit down. That
+    was close.] '
+  - "Now that you\u2019re here we can finally get some nosh! Anything you\u2019re
+    looking at for a main?"
+  - '[You peruse the menu. Nothing seems to accommodate a more unconventional appetite
+    like yours, but you see a few options that may seem normal enough to consume.] '
+  - "Hm. I would\u2019ve gone for the veggie tart, but whatever suits your palate.."
+  - "[Cordero looks off to the side of the table. It seems that you two don\u2019t
+    share similar tastes..] "
+  - " Oh, what a choice! Love me some goat cheese\u2026"
+  - "[It seems Cordero\u2019s more inclined to talk with you.]"
+  - Oop! Almost forgot!
+  - What are you feeling for starters?
+  - '[You eye the fruits curiously, set aside on the table by the wall. '
+  - "Picking one up between your lustrous, slimy hand, you admire a perfect, shining
+    red apple. It glints in the faint moody lighting, a gorgeous waxy sheen over
+    it\u2019s unblemished surface."
+  - You take a bite into the supple flesh of the fruit, awaiting for the sweet taste
+    to fill your leafy maw as the apple crunches under your many sharp teeth.
+  - "It\u2019s styrofoam."
+  - Cordero erupts with laughter, almost choking on her table water.]
+  - Did you actually eat the decorative fruit? HAH! HAHA!
+  - "[Cordero\u2019s laughs subside slightly, slapping their hand against the table
+    with a clink of the cutlery before calming down.]"
+  - "You are a very compelling comedian, you know? Honestly, barely even exchanged
+    \u201Chello\u2019s\u201D and already made me laugh more than anyone else I\u2019ve
+    talked to in a long time."
+  - Making a very compelling case for yourself.
+  - "Aha! I appreciate it, but I\u2019d rather keep things pretty surface level right
+    now."
+  - "I think I\u2019m quite interested in you, honestly. You seem mysterious\u2026
+    ominous even"
+  - '[Uh oh.'
+  - You feel beads of sweat begin to form from your leafy pores.]
+  - 'I like that about you. '
+  - " But I think it\u2019d be good to know basics, yeah? Like.. what do you do for
+    fun?"
+  - '[You wrack your brain for the most normal hobby you enjoy.]'
+  - " That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
+    by chance?"
+  - "HAH! Oh, imagine.. that\u2019d be cool, though."
+  - "[You\u2019re reminded of your chess match with Bigfoot Brian last Tuesday."
+  - The nervous feeling intensifies. Your leaves begin to tremble slightly.
+  - Are they onto you?
+  - You should figure out a way to leave before your cover is blown.]
+  - ' Speaking of, how much do you know about cryptids?'
+  - Mothman? Chupacabra? Nessie?
+  - If you were a cryptid, which one would you be?
+  - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
+    the diet\u2026"
+  - If you were a cryptid, which one would you be?
+  - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
+    the diet\u2026"
+  - '[She knows too much.'
+  - Quick. Figure out a way to escape.]
+  - "Oh\u2014 huh? "
+  - '[You quickly stand and slink away from the table before breaking into a sprint,
+    almost toppling a waiter with your main meals.'
+  - You run out of the restaurant, off into the alleyway to return home.
+  - Well, you kept your true identity safe.. but at what cost?
+  dialogOptions1:
+  - 
+  - '[have a seat]'
+  - '[salt-baked fish with fried wild greens and lemon]'
+  - ' [Eye the fruit on the table.]'
+  - I collect moss.
+  - " That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
+    by chance?"
+  - ' I have to go, I need to.. vacuum my grass.'
+  dialogOptions2:
+  - 
+  - '[grab a seat]'
+  - '[vegetable tart with grilled goat cheese]'
+  - "No thanks, I\u2019d rather get to know you more, actually."
+  - I contemplate in the woods, often of my own human mortality.
+  - "HAH! Oh, imagine.. that\u2019d be cool, though."
+  - "My cat texted me saying she\u2019s fallen into a coma, I need to leave quickly! "
+  dateUI: {fileID: 0}
+  textBox: {fileID: 0}
+  talking: {fileID: 0}
+  option1txt: {fileID: 0}
+  option2txt: {fileID: 0}
+  Buttoninteractions: {fileID: 0}
+  floatingBubble: {fileID: 0}
+  dialog: 51
+--- !u!114 &1913144888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf45605b53a6604fb7c97c810d3ce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionOne: {fileID: 1734949132}
+  OptionTwo: {fileID: 2003148212}
+  option1clicked: 0
+  option2clicked: 0
+--- !u!135 &1913144889
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.8294601
+  m_Center: {x: -2.9997956e-11, y: 0, z: -0.8294605}
+--- !u!136 &1913144890
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1913144891
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 42ef138de99b97246905c211a5e72366, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1913144892
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913144885}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1922596390
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,6 +7819,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea64b16b5419b34aacb590b3cff8fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cretura: {fileID: 406979653}
+  spinch: {fileID: 464015906}
+  inTextBox: 0
+  writtenDialog: []
+  dialogOptions1: []
+  dialogOptions2: []
+  textBox: {fileID: 0}
+  talking: {fileID: 0}
+  option1txt: {fileID: 0}
+  option2txt: {fileID: 0}
+  Buttoninteractions: {fileID: 0}
+  floatingBubble: {fileID: 0}
+  dialog: 0
 --- !u!135 &1922596392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8095,6 +9079,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4996892193430746491}
+  - {fileID: 725266106}
+  - {fileID: 406011119}
+  - {fileID: 1112867313}
+  - {fileID: 1913144886}
   m_Father: {fileID: 8214546031706031515}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
