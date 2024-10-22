@@ -28,7 +28,7 @@ public class Spinch_to_cordi_2 : MonoBehaviour
     private int w = 0;
     private int q = 0;
 
-    [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
+    [SerializeField] private int dialog = 15; //Make sure this matches the amount of cases
 
 
     void Update()
