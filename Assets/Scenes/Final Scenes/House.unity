@@ -10398,6 +10398,8 @@ GameObject:
   - component: {fileID: 646498309745955007}
   - component: {fileID: 7213965475269775724}
   - component: {fileID: 2661337944906972931}
+  - component: {fileID: 7213965475269775725}
+  - component: {fileID: 7213965475269775726}
   m_Layer: 0
   m_Name: 'Test NPC '
   m_TagString: Untagged
@@ -16055,8 +16057,8 @@ GameObject:
   - component: {fileID: 6365061517193807160}
   - component: {fileID: 6365061517193807161}
   - component: {fileID: 6365061517193807166}
-  - component: {fileID: 6365061517193807167}
   - component: {fileID: 6365061517193807162}
+  - component: {fileID: 6365061517193807167}
   m_Layer: 0
   m_Name: Test player
   m_TagString: Untagged
@@ -16089,11 +16091,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6365061517193807165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad29944c77ee3b742bd3f22e1657138f, type: 3}
+  m_Script: {fileID: 11500000, guid: a6879c470de9a0348bffacdecd1bba94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   phoneMenu: {fileID: 6365061517193807162}
-  interactWith: {fileID: 0}
+  interactWith: {fileID: 7213965475269775724}
+  spc: {fileID: 7213965475269775725}
+  spc2: {fileID: 7213965475269775726}
   walkSpeed: 5
 --- !u!222 &6365061517213379021
 CanvasRenderer:
@@ -17136,6 +17140,80 @@ MonoBehaviour:
   Buttoninteractions: {fileID: 2661337944906972931}
   floatingBubble: {fileID: 4048074702986086578}
   dialog: 9
+--- !u!114 &7213965475269775725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634928001127484932}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d16c86729cd10546b2052e0d060bfe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516400305368}
+  spinch: {fileID: 6365061516381057727}
+  inTextBox: 0
+  writtenDialog:
+  - What an excellent choice!
+  - Now, we shall make you look absolutely stunning for your outing!
+  - " You\u2019ll be meeting them at a restaurant, so I believe you should dress
+    for the occasion ."
+  - I humbly request that you try on some positively dazzling outfits I have prepared
+    for you. They shall make you look as bright and lively as a star.
+  - Choose whatever you think will look best on your stunning leafy form.
+  dialogOptions1: []
+  dialogOptions2: []
+  textBox: {fileID: 6365061516732155725}
+  talking: {fileID: 6365061516227431533}
+  option1txt: {fileID: 6365061516453767163}
+  option2txt: {fileID: 6365061517239839493}
+  Buttoninteractions: {fileID: 2661337944906972931}
+  floatingBubble: {fileID: 4048074702986086578}
+  dialog: 5
+--- !u!114 &7213965475269775726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634928001127484932}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd8f59f737832e4abf5543aa8a957af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516400305368}
+  spinch: {fileID: 6365061516381057727}
+  inTextBox: 0
+  writtenDialog:
+  - ...
+  - '[Her nose scrunches up briefly as she looks you up and down.]  '
+  - You look..
+  - "\u2026adequate\u2026"
+  - "\u2026"
+  - I think the most vital part is going out as yourself, yes?
+  - ' Come, dear, it will be fine! You are an absolutely spectacular anthropomorphic
+    leaf creature with an even more spectacular judge of character.'
+  - Just enjoy your date.
+  - Now look at you! Perfect.
+  - Hm, should we give you a cut with those hedge trimmers..?
+  - Nay! You are perfection.
+  - " Let us travel to the restaurant post-haste! But, first\u2026"
+  - '[You feel a swirl of magic surround you; a warm breeze that hugs tight and comforts
+    you. It stirs your leaves, but settles shortly after.]'
+  - "\u2026A little trick to help you not stand out. "
+  - ' Now, let us depart!'
+  dialogOptions1: []
+  dialogOptions2: []
+  textBox: {fileID: 6365061516732155725}
+  talking: {fileID: 6365061516227431533}
+  option1txt: {fileID: 6365061516453767163}
+  option2txt: {fileID: 6365061517239839493}
+  Buttoninteractions: {fileID: 2661337944906972931}
+  floatingBubble: {fileID: 4048074702986086578}
+  dialog: 15
 --- !u!23 &7230465526358445741
 MeshRenderer:
   m_ObjectHideFlags: 0
