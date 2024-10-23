@@ -20,6 +20,8 @@ public class Spinch_to_cordi : MonoBehaviour
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
+    public GameObject mainCanvas;
+    public GameObject minigameCanvas;
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
@@ -31,9 +33,14 @@ public class Spinch_to_cordi : MonoBehaviour
     private int w = 0;
     private int q = 0;
 
-    [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
+    [SerializeField] private int dialog = 6; //Make sure this matches the amount of cases
 
-
+    private void Start()
+    {
+        floatingBubble.SetActive(false);
+        inTextBox = true;
+        textBox.gameObject.SetActive(true);
+    }
     void Update()
     {
 
@@ -94,6 +101,14 @@ public class Spinch_to_cordi : MonoBehaviour
 
                 advance = true;
 
+                break;
+           
+            case 6:
+                textBox.gameObject.SetActive(false);
+                Buttoninteractions.OptionOne.gameObject.SetActive(false);
+                Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+                mainCanvas.SetActive(false);
+                minigameCanvas.SetActive(true);
 
                 break;
                 //dress up minigame occurs here, i will consider it as one script but if we need to it should be easy to alter//

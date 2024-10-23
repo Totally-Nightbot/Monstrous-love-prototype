@@ -31,7 +31,7 @@ public class Spinch_intro : MonoBehaviour
     public Buttoninteractions Buttoninteractions;
     public GameObject floatingBubble;
 
-  private int text = 1;
+    [SerializeField] private int text = 1;
   private int w = 0;
   private int q = 0;
 
@@ -170,7 +170,9 @@ public class Spinch_intro : MonoBehaviour
                 break;
 
             case 11:
-               dateUI.gameObject.SetActive(true);
+                textoff();
+                dateUI.gameObject.SetActive(true);
+               // Debug.Log("activate date sequence");
 
                 break;
 
@@ -244,11 +246,15 @@ public class Spinch_intro : MonoBehaviour
             floatingBubble.SetActive(true);
         }
 
+        textoff();
+    }
+
+    void textoff()
+    {
         textBox.gameObject.SetActive(false);
         Buttoninteractions.OptionOne.gameObject.SetActive(false);
         Buttoninteractions.OptionTwo.gameObject.SetActive(false);
     }
-
 
 
     // Code written by Maxolotl (Jayden Cassar) 

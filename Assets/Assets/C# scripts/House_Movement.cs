@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class House_Movement : MonoBehaviour
 {
+
+    [HideInInspector] public bool cordydate;
 	public PhoneMenu phoneMenu;
     public Spinch_intro interactWith;
     public Spinch_to_cordi spc;

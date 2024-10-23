@@ -30,7 +30,12 @@ public class Spinch_to_cordi_2 : MonoBehaviour
 
     [SerializeField] private int dialog = 15; //Make sure this matches the amount of cases
 
-
+    private void Start()
+    {
+        floatingBubble.SetActive(false);
+        inTextBox = true;
+        textBox.gameObject.SetActive(true);
+    }
     void Update()
     {
 

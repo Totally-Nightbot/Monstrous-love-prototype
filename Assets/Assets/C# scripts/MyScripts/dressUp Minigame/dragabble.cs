@@ -14,7 +14,7 @@ public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
   public void OnBeginDrag(PointerEventData eventdata)
     {
-        Debug.Log("onBeginDrag");
+       // Debug.Log("onBeginDrag");
 
         parentToReturnTo = this.transform.parent;
         this.transform.SetParent(this.transform.parent.parent);
@@ -23,7 +23,7 @@ public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
     public void OnDrag(PointerEventData eventData)
     {
-        //Debug.Log("onDrag");
+       // Debug.Log("onDrag");
 
         this.transform.position = eventData.position;
 
