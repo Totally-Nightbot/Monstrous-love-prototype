@@ -28,7 +28,7 @@ public GameObject floatingBubble;
     [SerializeField] private int w = 0;
     [SerializeField] private int q = 0;
 
-[SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
+[SerializeField] private int dialog = 12; //Make sure this matches the amount of cases
 
 
 void Update()
@@ -53,7 +53,7 @@ void Update()
             advance = true;
             spinch.happy.SetActive(true);
             spinch.neutral.SetActive(false);
-            cretura.sad.SetActive(true);
+            cretura.nervous.SetActive(true);
             cretura.neutral.SetActive(false);
 
             break;
@@ -84,8 +84,8 @@ void Update()
             else if (Buttoninteractions.option2clicked == true)
             {
                 ButtonDeactiveate();
-                text = 4; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
-                w = 3; // Where in the dialog inventory to go from
+                text = 5; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                w = 2; // Where in the dialog inventory to go from
             }
 
             break;
@@ -93,13 +93,17 @@ void Update()
 
         case 3:
             talking.text = (writtenDialog[w]);
-            advance = true;
-                text = 5;
-                w = 4 ;
+                
+                advance = true;
+                
 
-            break;
-
+                break;
         case 4:
+                text = 6;
+                w = 3;
+                advance = true;
+                break;
+        case 5:
             talking.text = (writtenDialog[w]);
             advance = true;
 
@@ -107,16 +111,16 @@ void Update()
 
             break;
 
-        case 5:
+        case 6:
             talking.text = (writtenDialog[w]);
             advance = true;
                 spinch.neutral.SetActive(true);
                 spinch.happy.SetActive(false);
                 cretura.neutral.SetActive(true);
-                cretura.sad.SetActive(false);
+                cretura.nervous.SetActive(false);
             break;
 
-        case 6:
+        case 7:
             talking.text = (writtenDialog[w]);
             advance = true;
                 spinch.happy.SetActive(true);
@@ -124,19 +128,19 @@ void Update()
 
             break;
 
-        case 7:
-            talking.text = (writtenDialog[w]);
-            advance = true;
+            case 8:
+                talking.text = (writtenDialog[w]);
+                advance = true;
                 spinch.neutral.SetActive(true);
                 spinch.happy.SetActive(false);
                 cretura.shock.SetActive(true);
                 cretura.neutral.SetActive(false);
-            break;
+                break;
 
 
 
 
-        case 8:
+            case 9:
             talking.text = (writtenDialog[w]);
               
                 while (advance == true)
@@ -155,14 +159,15 @@ void Update()
                 if (Buttoninteractions.option1clicked == true)
                 {
                     ButtonDeactiveate();
-                    text = 11; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    text = 10; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
                     w = 6; // Where in the dialog inventory to go from   //might be w9 instead 
                 }
 
                 else if (Buttoninteractions.option2clicked == true)
                 {
                     ButtonDeactiveate();
-                    text++;
+                    text = 12;
+                    w = 8;
                 }
 
 
@@ -170,7 +175,7 @@ void Update()
 
                 break;
 
-        case 9:
+        case 10:
             talking.text = (writtenDialog[w]);
             advance = true;
             spinch.shock.SetActive(true);
@@ -178,7 +183,7 @@ void Update()
 
             break;
 
-        case 10:
+        case 11:
             talking.text = (writtenDialog[w]);
             advance = true;
             spinch.happy.SetActive(true);
@@ -186,7 +191,7 @@ void Update()
 
             break;
 
-        case 11:
+        case 12:
             talking.text = (writtenDialog[w]);
             advance = true;
                 spinch.happy.SetActive(true);

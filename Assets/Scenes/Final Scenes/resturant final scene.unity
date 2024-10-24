@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.033023104, g: 0.025527336, b: 0.01527917, a: 1}
+  m_IndirectSpecularColor: {r: 0.03302308, g: 0.025527326, b: 0.015279179, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1703,7 +1703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &406011119
 Transform:
   m_ObjectHideFlags: 0
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 406011120}
   floatingBubble: {fileID: 683343394}
-  dialog: 18
+  dialog: 17
 --- !u!135 &406011122
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3296,7 +3296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &725266106
 Transform:
   m_ObjectHideFlags: 0
@@ -3422,7 +3422,9 @@ MonoBehaviour:
   spinch: {fileID: 464015906}
   inTextBox: 0
   writtenDialog:
-  - fuck off
+  - 'We have arrived! Quite a fine establishment, oh-so similar to one we visited
+    back when you were once the size of the leaf bestowed upon my head.. How time
+    flies, does it not? '
   - '  Sure, I may not be as finely aged as you are, but I certainly have spent more
     of my time perusing the human world.'
   - " I\u2019m not quite sure if they have figured out how to put human restaurants
@@ -3455,7 +3457,7 @@ MonoBehaviour:
   text: 1
   w: 0
   q: 0
-  dialog: 11
+  dialog: 12
 --- !u!1 &728592332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7789571202078169714, guid: c174e6ff4058a1949b7754886686b6c3, type: 3}
@@ -4773,7 +4775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1112867313
 Transform:
   m_ObjectHideFlags: 0
@@ -4782,7 +4784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112867312}
   m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
-  m_LocalPosition: {x: 12.84, y: 4.41, z: 4.86}
+  m_LocalPosition: {x: 75.89, y: 6.06, z: 15.75}
   m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7660,9 +7662,6 @@ MonoBehaviour:
   - If you were a cryptid, which one would you be?
   - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
     the diet\u2026"
-  - If you were a cryptid, which one would you be?
-  - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
-    the diet\u2026"
   - '[She knows too much.'
   - Quick. Figure out a way to escape.]
   - "Oh\u2014 huh? "
@@ -7676,8 +7675,6 @@ MonoBehaviour:
   - '[salt-baked fish with fried wild greens and lemon]'
   - ' [Eye the fruit on the table.]'
   - I collect moss.
-  - " That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
-    by chance?"
   - ' I have to go, I need to.. vacuum my grass.'
   dialogOptions2:
   - 
@@ -7685,7 +7682,6 @@ MonoBehaviour:
   - '[vegetable tart with grilled goat cheese]'
   - "No thanks, I\u2019d rather get to know you more, actually."
   - I contemplate in the woods, often of my own human mortality.
-  - "HAH! Oh, imagine.. that\u2019d be cool, though."
   - "My cat texted me saying she\u2019s fallen into a coma, I need to leave quickly! "
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
@@ -7693,7 +7689,7 @@ MonoBehaviour:
   option2txt: {fileID: 777538456}
   Buttoninteractions: {fileID: 1913144888}
   floatingBubble: {fileID: 1595318890}
-  dialog: 51
+  dialog: 53
 --- !u!114 &1913144888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7997,7 +7993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1998399904
 RectTransform:
   m_ObjectHideFlags: 0

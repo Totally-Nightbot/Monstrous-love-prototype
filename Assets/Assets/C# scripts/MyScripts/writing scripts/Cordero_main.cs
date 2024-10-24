@@ -32,7 +32,7 @@ public class Cordero_main : MonoBehaviour
     private int w = 0;
     private int q = 0;
 
-    [SerializeField] private int dialog = 51; //Make sure this matches the amount of cases
+    [SerializeField] private int dialog = 53; //Make sure this matches the amount of cases
 
 
     void Update()
@@ -67,7 +67,7 @@ public class Cordero_main : MonoBehaviour
 
                 break;
             case 3:
-                
+
 
                 talking.text = (writtenDialog[w]);
 
@@ -92,7 +92,7 @@ public class Cordero_main : MonoBehaviour
                 else if (Buttoninteractions.option2clicked == true)
                 {
                     ButtonDeactiveate();
-                    text = 5; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    text = 6; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
                     w = 3; // Where in the dialog inventory to go from
                 }
 
@@ -101,17 +101,20 @@ public class Cordero_main : MonoBehaviour
             case 4: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
                 talking.text = (writtenDialog[w]);
 
-                text = 6;
-                w = 4;
+
 
                 advance = true;
 
 
                 break;
-
             case 5:
+                text = 7;
+                w = 4;
+                advance = true;
+                break;
+            case 6:
                 talking.text = (writtenDialog[w]);
-               
+
                 cretura.shock.SetActive(true); //To change a character's expression use the format NAME.EMOTION.Setactive(true) for the one you want to be active
                 cretura.neutral.SetActive(false); //Use NAME.EMOTION.setactive(false) for the one you want to deactivate
                 advance = true;
@@ -119,38 +122,42 @@ public class Cordero_main : MonoBehaviour
 
                 break;
 
-            case 6:
+            case 7:
                 talking.text = (writtenDialog[w]);
                 cretura.blush.SetActive(true);
-                cretura.neutral.SetActive(false);
+                cretura.shock.SetActive(false);
                 cordero.happy.SetActive(false);
                 cordero.shock.SetActive(true);
                 advance = true;
 
                 break;
 
-            case 7:
+            case 8:
                 talking.text = (writtenDialog[w]);
                 cordero.happy.SetActive(true);
                 cordero.shock.SetActive(false);
                 advance = true;
                 break;
 
-            case 8:
+            case 9:
 
                 talking.text = (writtenDialog[w]);
 
-             
-               
+
+
                 cretura.nervous.SetActive(true);
                 cretura.blush.SetActive(false);
-                
+
                 advance = true;
 
 
                 break;
+            case 10:
+                talking.text = (writtenDialog[w]);
+                advance = true;
+                break;
 
-            case 9:
+            case 11:
 
                 talking.text = (writtenDialog[w]);
 
@@ -162,7 +169,7 @@ public class Cordero_main : MonoBehaviour
                 break;
 
             // add new stuff here
-            case 10:
+            case 12:
                 talking.text = (writtenDialog[w]);
 
                 cretura.nervous.SetActive(true);
@@ -170,7 +177,7 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 11:
+            case 13:
 
                 talking.text = (writtenDialog[w]);
 
@@ -202,7 +209,7 @@ public class Cordero_main : MonoBehaviour
 
                 break;
 
-            case 12:
+            case 14:
                 talking.text = (writtenDialog[w]);
 
                 cordero.disappointed.SetActive(true);
@@ -210,18 +217,22 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 13:
+            case 15:
                 talking.text = (writtenDialog[w]);
 
-                text = 16;
-                w = 14;
-                cretura.sad.SetActive(true);
+
+                cretura.blush.SetActive(true);
                 cretura.nervous.SetActive(false);
                 advance = true;
-                
+
                 break;
 
-            case 14:
+            case 16:
+                text = 17;
+                w = 14;
+                break;
+
+            case 17:
                 talking.text = (writtenDialog[w]);
 
                 cordero.blush.SetActive(true);
@@ -229,15 +240,45 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 15:
+            case 18:
                 talking.text = (writtenDialog[w]);
-
-                cretura.neutral.SetActive(true);
-                cretura.nervous.SetActive(false);
                 advance = true;
                 break;
 
-            case 16:
+            case 19:
+                talking.text = (writtenDialog[w]);
+
+                cretura.neutral.SetActive(true);
+                cretura.blush.SetActive(false);
+
+                while (advance == true)
+                {
+                    q++;
+                    advance = false;
+                }
+
+                ButtonActivate();
+
+                choice = true;
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
+
+                if (Buttoninteractions.option1clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text++;
+                }
+
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text = 28; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    w = 25; // Where in the dialog inventory to go from
+                }
+
+                break;
+
+            case 20:
                 talking.text = (writtenDialog[w]);
 
                 cordero.confused.SetActive(true);
@@ -246,7 +287,7 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 17:
+            case 21:
                 talking.text = (writtenDialog[w]);
 
                 cretura.nervous.SetActive(true);
@@ -255,37 +296,12 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 18:
+            case 22:
                 talking.text = (writtenDialog[w]);
-
-                while (advance == true)
-                {
-                    q++;
-                    advance = false;
-                }
-
-                ButtonActivate();
-
-                choice = true;
-                option1txt.text = (dialogOptions1[q]);
-                option2txt.text = (dialogOptions2[q]);
-
-                if (Buttoninteractions.option1clicked == true)
-                {
-                    ButtonDeactiveate();
-                    text++;
-                }
-
-                else if (Buttoninteractions.option2clicked == true)
-                {
-                    ButtonDeactiveate();
-                    text = 27; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
-                    w = 25; // Where in the dialog inventory to go from
-                }
                 advance = true;
                 break;
 
-            case 19:
+            case 23:
                 talking.text = (writtenDialog[w]);
 
                 cretura.neutral.SetActive(true);
@@ -293,21 +309,21 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 20:
+            case 24:
                 talking.text = (writtenDialog[w]);
 
                 //cretura eats the apple sprite goes here
                 advance = true;
                 break;
 
-            case 21:
+            case 25:
                 talking.text = (writtenDialog[w]);
 
                 //here as well for the above
                 advance = true;
                 break;
 
-            case 22:
+            case 26:
                 talking.text = (writtenDialog[w]);
 
                 //remove the unique sprite
@@ -316,7 +332,7 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 23:
+            case 27:
                 talking.text = (writtenDialog[w]);
 
                 cordero.happy.SetActive(true);
@@ -324,41 +340,45 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 24:
+            case 28:
                 talking.text = (writtenDialog[w]);
-
+                cretura.neutral.SetActive(true);
+                cretura.sad.SetActive(false);
                 cordero.blush.SetActive(true);
                 cordero.happy.SetActive(false);
                 advance = true;
                 break;
 
-            case 25:
-                talking.text = (writtenDialog[w]);
-
-                advance = true;
+            case 29:
+                text = 30;
+                w = 26;
                 break;
 
-            case 26:
+
+
+            case 30:
                 talking.text = (writtenDialog[w]);
 
                 cordero.neutral.SetActive(true);
                 cordero.blush.SetActive(false);
                 cretura.blush.SetActive(true);
-                cretura.sad.SetActive(false);
-
+                cretura.neutral.SetActive(false);
+               
                 advance = true;
                 break;
 
 
-            case 27:
+            case 31:
                 talking.text = (writtenDialog[w]);
 
-                text = 29;
-                w = 26;
+                cretura.blush.SetActive(false);
+                cretura.nervous.SetActive(true);
 
                 advance = true;
                 break;
-            case 28:
+
+
+            case 32:
                 talking.text = (writtenDialog[w]);
 
                 cordero.sad.SetActive(true);
@@ -366,57 +386,39 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 29:
-                talking.text = (writtenDialog[w]);
-
-                cordero.neutral.SetActive(true);
-                cordero.sad.SetActive(false);
-                cretura.neutral.SetActive(true);
-                cretura.blush.SetActive(false);
-                cretura.nervous.SetActive(false);
-                advance = true;
-                break;
-
-            case 30:
-                talking.text = (writtenDialog[w]);
-
-                cretura.nervous.SetActive(true);
-                cretura.neutral.SetActive(false);
-                advance = true;
-                break;
-
-
-
-            case 31:
-                talking.text = (writtenDialog[w]);
-
-                advance = true;
-                break;
-
-            case 32:
-                talking.text = (writtenDialog[w]);
-
-                cordero.blush.SetActive(true);
-                cordero.neutral.SetActive(false);
-                advance = true;
-                break;
-
             case 33:
                 talking.text = (writtenDialog[w]);
 
                 cordero.neutral.SetActive(true);
-                cordero.blush.SetActive(false);
+                cordero.sad.SetActive(false);
+                cretura.blush.SetActive(true);
+                cretura.nervous.SetActive(false);
                 advance = true;
                 break;
 
             case 34:
                 talking.text = (writtenDialog[w]);
+                cordero.neutral.SetActive(true);
+                cordero.blush.SetActive(false);
+                advance = true;
+
+
+                break;
+
+
+
+            case 35:
+                talking.text = (writtenDialog[w]);
+                cretura.nervous.SetActive(true);
+                cretura.blush.SetActive(false);
 
                 advance = true;
                 break;
 
-            case 35:
+            case 36:
                 talking.text = (writtenDialog[w]);
+                
+
 
                 while (advance == true)
                 {
@@ -441,22 +443,18 @@ public class Cordero_main : MonoBehaviour
                     ButtonDeactiveate();
                     text++;
                 }
-                advance = true;
-                advance = true;
-                break;
 
-            case 36:
-                talking.text = (writtenDialog[w]);
 
-                cordero.confused.SetActive(true);
-                cordero.neutral.SetActive(false);
-                advance = true;
                 break;
 
             case 37:
                 talking.text = (writtenDialog[w]);
-
+                cordero.blush.SetActive(true);
+                cordero.neutral.SetActive(false);
                 advance = true;
+
+
+
                 break;
 
             case 38:
@@ -467,32 +465,48 @@ public class Cordero_main : MonoBehaviour
 
             case 39:
                 talking.text = (writtenDialog[w]);
-
                 advance = true;
+                cretura.nervous.SetActive(true);
+                cretura.neutral.SetActive(false);
                 break;
 
             case 40:
                 talking.text = (writtenDialog[w]);
 
+                cordero.confused.SetActive(true);
+                cordero.neutral.SetActive(false);
                 advance = true;
                 break;
 
             case 41:
                 talking.text = (writtenDialog[w]);
 
-                cordero.happy.SetActive(true);
-                cordero.confused.SetActive(false);
-
                 advance = true;
                 break;
 
             case 42:
                 talking.text = (writtenDialog[w]);
+                cordero.blush.SetActive(true);
+                cordero.confused.SetActive(false);
 
                 advance = true;
                 break;
 
             case 43:
+                talking.text = (writtenDialog[w]);
+
+                advance = true;
+                break;
+
+            case 44:
+                talking.text = (writtenDialog[w]);
+                cordero.happy.SetActive(true);
+                cordero.blush.SetActive(false);
+                
+                advance = true;
+                break;
+
+            case 45:
                 talking.text = (writtenDialog[w]);
 
                 cordero.neutral.SetActive(true);
@@ -501,28 +515,28 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            case 44:
-                talking.text = (writtenDialog[w]);
-
-                cordero.happy.SetActive(true);
-                cordero.neutral.SetActive(false);
-
-                advance = true;
-                break;
-
-            case 45:
-                talking.text = (writtenDialog[w]);
-
-                advance = true;
-                break;
-
+          
             case 46:
                 talking.text = (writtenDialog[w]);
+              
+                cordero.happy.SetActive(true);
+                cordero.neutral.SetActive(false);
+                advance = true;
+
+                break;
+            case 47:
+                talking.text = (writtenDialog[w]);
+               
+                advance = true;
+                break;
+
+            case 48:
+                talking.text = (writtenDialog[w]);
 
                 advance = true;
                 break;
 
-            case 47:
+            case 49:
                 talking.text = (writtenDialog[w]);
 
                 while (advance == true)
@@ -548,26 +562,17 @@ public class Cordero_main : MonoBehaviour
                     ButtonDeactiveate();
                     text++;
                 }
-                advance = true;
-                advance = true;
-                advance = true;
-                break;
 
-            case 48:
-                talking.text = (writtenDialog[w]);
-                cordero.confused.SetActive(true);
-                cordero.happy.SetActive(false);
-                advance = true;
-                break;
 
-            case 49:
-                talking.text = (writtenDialog[w]);
 
-                advance = true;
                 break;
 
             case 50:
                 talking.text = (writtenDialog[w]);
+                cordero.confused.SetActive(true);
+                cordero.happy.SetActive(false);
+
+                //cretura frames should deactivate so we can't see cretura in the dialog menu
 
                 advance = true;
                 break;
@@ -578,7 +583,24 @@ public class Cordero_main : MonoBehaviour
                 advance = true;
                 break;
 
-            
+            case 52:
+                talking.text = (writtenDialog[w]);
+
+                advance = true;
+
+                break;
+            case 53:
+                talking.text = (writtenDialog[w]);
+                
+
+                advance = true;
+
+                break;
+
+             //add a transition to black, then you return home
+
+
+
             default:
                 Debug.LogError("out of case area");
 

@@ -137,7 +137,7 @@ public class Plant_2_cordi : MonoBehaviour
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.shock.SetActive(true);
-                cretura.nervous.SetActive(false);
+                cretura.sad.SetActive(false);
                 break;
 
             case 13:

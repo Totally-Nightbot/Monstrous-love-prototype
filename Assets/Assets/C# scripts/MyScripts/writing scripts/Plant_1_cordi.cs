@@ -29,7 +29,7 @@ public class Plant_1_cordi : MonoBehaviour
     private int w = 0;
     private int q = 0;
 
-    [SerializeField] private int dialog = 18; //Make sure this matches the amount of cases
+    [SerializeField] private int dialog = 17; //Make sure this matches the amount of cases
 
 
     void Update()
@@ -96,8 +96,8 @@ public class Plant_1_cordi : MonoBehaviour
                 {
                   
                     ButtonDeactiveate();
-                    text = 8; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
-                    w = 7; // Where in the dialog inventory to go from   
+                    text = 7; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    w = 6; // Where in the dialog inventory to go from   
                 }
 
 
@@ -122,29 +122,32 @@ public class Plant_1_cordi : MonoBehaviour
             case 7:
                 talking.text = (writtenDialog[w]);
                 advance = true;
-                text = 10;
-                w = 9;
+               
                
                 break;
 
-
-
-
             case 8:
+                text = 10;
+                w = 8;
+                advance = true;
+                break;
+
+
+            case 9:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                
 
                 break;
 
-            case 9:
+            case 10:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 
 
                 break;
 
-            case 10:
+            case 11:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.nervous.SetActive(true);
@@ -152,43 +155,37 @@ public class Plant_1_cordi : MonoBehaviour
 
                 break;
 
-            case 11:
+            case 12:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                
                 break;
 
-            case 12:
+            case 13:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.shock.SetActive(true);
                 cretura.nervous.SetActive(false);
                 break;
 
-            case 13:
+            case 14:
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.nervous.SetActive(true);
                 cretura.shock.SetActive(false);
                 break;
 
-            case 14:
-                talking.text = (writtenDialog[w]);
-                advance = true;
-
-                break;
-
             case 15:
                 talking.text = (writtenDialog[w]);
                 advance = true;
-                cretura.neutral.SetActive(true);
-                cretura.nervous.SetActive(false);
+
                 break;
 
             case 16:
                 talking.text = (writtenDialog[w]);
                 advance = true;
-
+                cretura.neutral.SetActive(true);
+                cretura.nervous.SetActive(false);
                 break;
 
             case 17:
@@ -197,11 +194,7 @@ public class Plant_1_cordi : MonoBehaviour
 
                 break;
 
-            case 18:
-                talking.text = (writtenDialog[w]);
-                advance = true;
-
-                break;
+           
 
                 //players look around for plant number 2, which is on a different script :)
 
