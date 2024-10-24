@@ -32,7 +32,7 @@ public class Restaurant_Movement : MonoBehaviour
 
         // the movement magic
 
-        if (plc2.inTextBox == false && plc.inTextBox && cm.inTextBox == false && spc3.inTextBox == false == false && phoneMenu.inPhone == false)
+        if (plc2.inTextBox == false && plc.inTextBox == false && cm.inTextBox == false && spc3.inTextBox == false && phoneMenu.inPhone == false)
         {
             rb.velocity = new Vector3(
                 Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 0.8f),

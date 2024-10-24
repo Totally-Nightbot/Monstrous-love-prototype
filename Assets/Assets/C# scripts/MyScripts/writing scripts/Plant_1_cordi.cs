@@ -14,9 +14,9 @@ public class Plant_1_cordi : MonoBehaviour
     private bool choice = false;
     private bool advance = false;
 
-    public List<string> writtenDialog;
-    public List<string> dialogOptions1;
-    public List<string> dialogOptions2;
+    [SerializeField] List<string> writtenDialog;
+    [SerializeField] List<string> dialogOptions1;
+    [SerializeField] List<string> dialogOptions2;
 
     public GameObject textBox;
     public TextMeshProUGUI talking;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.03302308, g: 0.025527326, b: 0.015279179, a: 1}
+  m_IndirectSpecularColor: {r: 0.033023104, g: 0.025527336, b: 0.01527917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1748,8 +1748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de7cd9446f371248afb2f577b9f7bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cretura: {fileID: 0}
-  spinch: {fileID: 0}
+  cretura: {fileID: 406979653}
+  spinch: {fileID: 464015906}
   inTextBox: 0
   writtenDialog:
   - 'SHHHHH! '
@@ -1780,12 +1780,12 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - ' [Continue talking to the paranoid plant]'
-  textBox: {fileID: 0}
-  talking: {fileID: 0}
-  option1txt: {fileID: 0}
-  option2txt: {fileID: 0}
-  Buttoninteractions: {fileID: 0}
-  floatingBubble: {fileID: 0}
+  textBox: {fileID: 211478480}
+  talking: {fileID: 1659923696}
+  option1txt: {fileID: 527615846}
+  option2txt: {fileID: 777538456}
+  Buttoninteractions: {fileID: 406011120}
+  floatingBubble: {fileID: 683343394}
   dialog: 18
 --- !u!135 &406011122
 SphereCollider:
@@ -3422,9 +3422,7 @@ MonoBehaviour:
   spinch: {fileID: 464015906}
   inTextBox: 0
   writtenDialog:
-  - 'We have arrived! Quite a fine establishment, oh-so similar to one we visited
-    back when you were once the size of the leaf bestowed upon my head.. How time
-    flies, does it not? '
+  - fuck off
   - '  Sure, I may not be as finely aged as you are, but I certainly have spent more
     of my time perusing the human world.'
   - " I\u2019m not quite sure if they have figured out how to put human restaurants
@@ -3448,12 +3446,15 @@ MonoBehaviour:
   - 
   - " I wonder if it\u2019s the same chain we have back at home."
   - Perfectly reasonable.
-  textBox: {fileID: 0}
-  talking: {fileID: 0}
-  option1txt: {fileID: 0}
-  option2txt: {fileID: 0}
-  Buttoninteractions: {fileID: 0}
-  floatingBubble: {fileID: 0}
+  textBox: {fileID: 211478480}
+  talking: {fileID: 1659923696}
+  option1txt: {fileID: 527615846}
+  option2txt: {fileID: 777538456}
+  Buttoninteractions: {fileID: 725266107}
+  floatingBubble: {fileID: 151784453}
+  text: 1
+  w: 0
+  q: 0
   dialog: 11
 --- !u!1 &728592332 stripped
 GameObject:
@@ -4781,7 +4782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112867312}
   m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
-  m_LocalPosition: {x: 7.49, y: 4.41, z: 12.84}
+  m_LocalPosition: {x: 12.84, y: 4.41, z: 4.86}
   m_LocalScale: {x: 0.5924908, y: 0.5924908, z: 0.5924908}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4802,7 +4803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cretura: {fileID: 406979653}
-  spinch: {fileID: 0}
+  spinch: {fileID: 464015906}
   inTextBox: 0
   writtenDialog:
   - '[You approach slowly, and about as casual as you can when striking up hushed
@@ -4832,12 +4833,12 @@ MonoBehaviour:
   - 'Good luck, field agent. Cordero is in the dining room. '
   dialogOptions1: []
   dialogOptions2: []
-  textBox: {fileID: 0}
-  talking: {fileID: 0}
-  option1txt: {fileID: 0}
-  option2txt: {fileID: 0}
-  Buttoninteractions: {fileID: 0}
-  floatingBubble: {fileID: 0}
+  textBox: {fileID: 211478480}
+  talking: {fileID: 1659923696}
+  option1txt: {fileID: 527615846}
+  option2txt: {fileID: 777538456}
+  Buttoninteractions: {fileID: 1112867315}
+  floatingBubble: {fileID: 661338983}
   dialog: 16
 --- !u!114 &1112867315
 MonoBehaviour:
@@ -7686,13 +7687,12 @@ MonoBehaviour:
   - I contemplate in the woods, often of my own human mortality.
   - "HAH! Oh, imagine.. that\u2019d be cool, though."
   - "My cat texted me saying she\u2019s fallen into a coma, I need to leave quickly! "
-  dateUI: {fileID: 0}
-  textBox: {fileID: 0}
-  talking: {fileID: 0}
-  option1txt: {fileID: 0}
-  option2txt: {fileID: 0}
-  Buttoninteractions: {fileID: 0}
-  floatingBubble: {fileID: 0}
+  textBox: {fileID: 211478480}
+  talking: {fileID: 1659923696}
+  option1txt: {fileID: 527615846}
+  option2txt: {fileID: 777538456}
+  Buttoninteractions: {fileID: 1913144888}
+  floatingBubble: {fileID: 1595318890}
   dialog: 51
 --- !u!114 &1913144888
 MonoBehaviour:
@@ -7799,7 +7799,6 @@ GameObject:
   - component: {fileID: 1922596394}
   - component: {fileID: 1922596393}
   - component: {fileID: 1922596392}
-  - component: {fileID: 1922596391}
   m_Layer: 0
   m_Name: spinch placeholder
   m_TagString: Untagged
@@ -7807,31 +7806,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1922596391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922596390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea64b16b5419b34aacb590b3cff8fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cretura: {fileID: 406979653}
-  spinch: {fileID: 464015906}
-  inTextBox: 0
-  writtenDialog: []
-  dialogOptions1: []
-  dialogOptions2: []
-  textBox: {fileID: 0}
-  talking: {fileID: 0}
-  option1txt: {fileID: 0}
-  option2txt: {fileID: 0}
-  Buttoninteractions: {fileID: 0}
-  floatingBubble: {fileID: 0}
-  dialog: 0
 --- !u!135 &1922596392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9798,7 +9772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &7676910208555089719
 BoxCollider:
   m_ObjectHideFlags: 0

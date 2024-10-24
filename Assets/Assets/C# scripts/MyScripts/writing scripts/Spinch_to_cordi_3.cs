@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Spinch_to_cordi_3 : MonoBehaviour
 {
-    public Cretura cretura;
+public Cretura cretura;
 public Spinch spinch;
 
 [HideInInspector] public bool inTextBox = false;
@@ -13,9 +13,9 @@ private bool inCollider = false;
 private bool choice = false;
 private bool advance = false;
 
-public List<string> writtenDialog;
-public List<string> dialogOptions1;
-public List<string> dialogOptions2;
+    [SerializeField] List<string> writtenDialog;
+    [SerializeField] List<string> dialogOptions1;
+    [SerializeField] List<string> dialogOptions2;
 
 public GameObject textBox;
 public TextMeshProUGUI talking;
@@ -24,9 +24,9 @@ public TextMeshProUGUI option2txt;
 public Buttoninteractions Buttoninteractions;
 public GameObject floatingBubble;
 
-private int text = 1;
-private int w = 0;
-private int q = 0;
+    [SerializeField] private int text = 1;
+    [SerializeField] private int w = 0;
+    [SerializeField] private int q = 0;
 
 [SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
 
@@ -49,7 +49,7 @@ void Update()
     switch (text) // the main text blocks of the chatting stuff 
     {
         case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
-            talking.text = (writtenDialog[w]);
+            talking.text = (writtenDialog[0]);
             advance = true;
             spinch.happy.SetActive(true);
             spinch.neutral.SetActive(false);
