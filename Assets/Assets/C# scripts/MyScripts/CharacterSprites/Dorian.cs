@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dorian : MonoBehaviour
 {
+    public GameObject all;
     public GameObject neutral;
     public GameObject blush;
     public GameObject confused;

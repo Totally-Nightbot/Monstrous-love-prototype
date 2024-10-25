@@ -18,7 +18,12 @@ public class Plant_2_cordi : MonoBehaviour
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
 
-    [SerializeField] private GameObject Test_NPC_Plant2;
+    [Header("npcs")]
+    [SerializeField] private GameObject Test_NPC_spinch;
+    [SerializeField] private GameObject front_NPC;
+    [SerializeField] private GameObject plant1_NPC;
+    [SerializeField] private GameObject plant2_NPC;
+    [SerializeField] private GameObject codero_NPC;
 
     public GameObject textBox;
     public TextMeshProUGUI talking;
@@ -40,7 +45,27 @@ public class Plant_2_cordi : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
+            front_NPC.SetActive(false);
+            Test_NPC_spinch.SetActive(false);
+            plant1_NPC.SetActive(false);
+            codero_NPC.SetActive(false);
 
+            GetComponent<Buttoninteractions>().enabled = true;
+
+            if (inTextBox == false)
+            {
+                floatingBubble.SetActive(true);
+            }
+        }
+        else if (inCollider == false)
+        {
+            front_NPC.SetActive(true);
+            Test_NPC_spinch.SetActive(true);
+            plant1_NPC.SetActive(true);
+            codero_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+
+            GetComponent<Buttoninteractions>().enabled = false;
         }
 
         if (text >= dialog)

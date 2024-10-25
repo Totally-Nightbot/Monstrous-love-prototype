@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spinch : MonoBehaviour
 {
+    public GameObject all;
     public GameObject neutral;
     public GameObject angry;
     public GameObject shock;

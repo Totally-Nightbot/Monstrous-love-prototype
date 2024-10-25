@@ -16,7 +16,12 @@ public class InteractWith : MonoBehaviour
     private bool choice = false;
     private bool advance = false;
 
-    [SerializeField] private GameObject TEST_NPC;
+    [Header("npcs")]
+    [SerializeField] private GameObject Test_NPC_spinch;
+    [SerializeField] private GameObject front_NPC;
+    [SerializeField] private GameObject plant1_NPC;
+    [SerializeField] private GameObject plant2_NPC;
+    [SerializeField] private GameObject codero_NPC;
 
 
     [Header("Dialog")]
@@ -43,10 +48,31 @@ public class InteractWith : MonoBehaviour
     void Update()
     {
 
+
         if (inCollider == true)
         {
             EnterInteract();
-            
+           plant2_NPC.SetActive(false);
+            Test_NPC_spinch.SetActive(false);
+            plant1_NPC.SetActive(false);
+            codero_NPC.SetActive(false);
+
+            GetComponent<Buttoninteractions>().enabled = true;
+
+            if (inTextBox == false)
+            {
+                floatingBubble.SetActive(true);
+
+            }
+        }
+        else if (inCollider == false)
+        {
+            plant2_NPC.SetActive(true);
+            Test_NPC_spinch.SetActive(true);
+            plant1_NPC.SetActive(true);
+            codero_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+            GetComponent<Buttoninteractions>().enabled = false;
         }
 
         if (text >= dialog)

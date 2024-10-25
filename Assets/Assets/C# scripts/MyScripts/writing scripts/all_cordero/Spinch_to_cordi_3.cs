@@ -9,15 +9,24 @@ public Cretura cretura;
 public Spinch spinch;
 
 [HideInInspector] public bool inTextBox = false;
-private bool inCollider = false;
+    [SerializeField] bool inCollider = false;
 private bool choice = false;
 private bool advance = false;
 
+    [Header("Writting")]
     [SerializeField] List<string> writtenDialog;
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
+
+    [Header("npcs")]
     [SerializeField] private GameObject Test_NPC_spinch;
-public GameObject textBox;
+    [SerializeField] private GameObject front_NPC;
+    [SerializeField] private GameObject plant1_NPC;
+    [SerializeField] private GameObject plant2_NPC;
+    [SerializeField] private GameObject codero_NPC;
+
+    [Header("other stuff")]
+    public GameObject textBox;
 public TextMeshProUGUI talking;
 public TextMeshProUGUI option1txt;
 public TextMeshProUGUI option2txt;
@@ -37,8 +46,28 @@ void Update()
     if (inCollider == true)
     {
         EnterInteract();
+            front_NPC.SetActive(false);
+            plant1_NPC.SetActive(false);
+            plant2_NPC.SetActive(false);
+            codero_NPC.SetActive(false);
+            spinch.all.SetActive(true);
+            GetComponent<Buttoninteractions>().enabled = true;
 
-    }
+            if (inTextBox == false)
+            {
+                floatingBubble.SetActive(true);
+            }
+        }
+    else if (inCollider == false)
+        {
+            front_NPC.SetActive(true);
+            plant1_NPC.SetActive(true);
+            plant2_NPC.SetActive(true);
+            codero_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+            spinch.all.SetActive(false);
+            GetComponent<Buttoninteractions>().enabled = false;
+        }
 
     if (text >= dialog)
     {
@@ -242,11 +271,11 @@ void ButtonActivate()// shows the player the button options
 }
 
 void ButtonDeactiveate()// hides the button options from the player
-{
+{ 
     Buttoninteractions.option1clicked = false;
     Buttoninteractions.option2clicked = false;
     choice = false;
-
+        Debug.Log("DEACTIVED BUTTON UGH");
     Buttoninteractions.OptionOne.gameObject.SetActive(false);
     Buttoninteractions.OptionTwo.gameObject.SetActive(false);
     talking.gameObject.SetActive(true);

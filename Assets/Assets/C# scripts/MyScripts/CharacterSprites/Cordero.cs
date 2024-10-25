@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Cordero : MonoBehaviour
 {
+    public GameObject all;
     public GameObject neutral;
     public GameObject blush;
     public GameObject confused;

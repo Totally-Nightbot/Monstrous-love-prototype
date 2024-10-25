@@ -20,7 +20,12 @@ public class Cordero_main : MonoBehaviour
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
 
-    [SerializeField] private GameObject Test_NPC_Cordero;
+    [Header("npcs")]
+    [SerializeField] private GameObject Test_NPC_spinch;
+    [SerializeField] private GameObject front_NPC;
+    [SerializeField] private GameObject plant1_NPC;
+    [SerializeField] private GameObject plant2_NPC;
+    [SerializeField] private GameObject codero_NPC;
 
     [Header("OtherItems")]
     public GameObject textBox;
@@ -39,11 +44,31 @@ public class Cordero_main : MonoBehaviour
 
     void Update()
     {
-
         if (inCollider == true)
         {
             EnterInteract();
+            front_NPC.SetActive(false);
+            Test_NPC_spinch.SetActive(false);
+            plant2_NPC.SetActive(false);
+            plant1_NPC.SetActive(false);
+            cordero.all.SetActive(true);
+            if(inTextBox == false)
 
+            GetComponent<Buttoninteractions>().enabled = true;
+            {
+                floatingBubble.SetActive(true);
+            }
+        }
+        else if (inCollider == false)
+        {
+            front_NPC.SetActive(true);
+            Test_NPC_spinch.SetActive(true);
+            plant2_NPC.SetActive(true);
+            plant1_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+            cordero.all.SetActive(false);
+
+            GetComponent<Buttoninteractions>().enabled = false;
         }
 
         if (text >= dialog)

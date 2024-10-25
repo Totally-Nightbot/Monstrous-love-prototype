@@ -20,8 +20,10 @@ public class Buttoninteractions : MonoBehaviour
         op2.onClick.AddListener(OptionTwoClicked);
     }
 
+
     void OptionOneClicked()
 	{
+        if (!this.enabled) return;
         option1clicked = true;
         Debug.Log("buttonclicked number 1");
         
@@ -29,6 +31,7 @@ public class Buttoninteractions : MonoBehaviour
 
     void OptionTwoClicked()
     {
+        if (!this.enabled) return;
         option2clicked = true;
         Debug.Log("buttonclicked number 2");
        

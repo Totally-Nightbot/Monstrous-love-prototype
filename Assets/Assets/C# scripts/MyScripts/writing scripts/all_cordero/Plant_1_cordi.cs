@@ -9,17 +9,25 @@ public class Plant_1_cordi : MonoBehaviour
     public Cretura cretura;
     public Spinch spinch; //plant sprite go here?
 
+   
     [HideInInspector] public bool inTextBox = false;
     private bool inCollider = false;
     private bool choice = false;
     private bool advance = false;
 
+    [Header("writting")]
     [SerializeField] List<string> writtenDialog;
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
 
-    [SerializeField] private GameObject Test_NPC_Plant1;
+    [Header("npcs")]
+    [SerializeField] private GameObject Test_NPC_spinch;
+    [SerializeField] private GameObject front_NPC;
+    [SerializeField] private GameObject plant1_NPC;
+    [SerializeField] private GameObject plant2_NPC;
+    [SerializeField] private GameObject codero_NPC;
 
+    [Header("otherstuff")]
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
@@ -40,8 +48,29 @@ public class Plant_1_cordi : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
+            front_NPC.SetActive(false);
+            Test_NPC_spinch.SetActive(false);
+            plant2_NPC.SetActive(false);
+            codero_NPC.SetActive(false);
 
+            GetComponent<Buttoninteractions>().enabled = true;
+
+            if (inTextBox == false)
+            {
+                floatingBubble.SetActive(true);
+            }
         }
+        else if (inCollider == false)
+        {
+            front_NPC.SetActive(true);
+            Test_NPC_spinch.SetActive(true);
+            plant2_NPC.SetActive(true);
+            codero_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+
+            GetComponent<Buttoninteractions>().enabled = false;
+        }
+
 
         if (text >= dialog)
         {
