@@ -16,12 +16,16 @@ public class InteractWith : MonoBehaviour
     private bool choice = false;
     private bool advance = false;
 
+    [SerializeField] private GameObject TEST_NPC;
+
+
     [Header("Dialog")]
     public List<string> writtenDialog;
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
     [Header("OtherItems")]
+    
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;

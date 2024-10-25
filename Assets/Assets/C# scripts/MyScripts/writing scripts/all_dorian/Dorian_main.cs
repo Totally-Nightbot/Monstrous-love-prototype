@@ -20,9 +20,11 @@ public class Dorian_main: MonoBehaviour
     private bool advance = false;
 
     [Header("Dialog")]
-    public List<string> writtenDialog;
-    public List<string> dialogOptions1;
-    public List<string> dialogOptions2;
+    [SerializeField] List<string> writtenDialog;
+    [SerializeField] List<string> dialogOptions1;
+    [SerializeField] List<string> dialogOptions2;
+
+    [SerializeField] private GameObject dorian_obj;
 
     [Header("OtherItems")]
     public GameObject dateUI;
@@ -39,7 +41,8 @@ public class Dorian_main: MonoBehaviour
 
    [SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
 
-    
+   
+
     void Update()
     {
 

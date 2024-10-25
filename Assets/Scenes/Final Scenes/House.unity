@@ -11124,7 +11124,7 @@ GameObject:
   - component: {fileID: 7213965475269775726}
   - component: {fileID: 2661337944906972931}
   m_Layer: 0
-  m_Name: 'Test NPC '
+  m_Name: spinch_home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17854,6 +17854,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - ......................................
+  spinch_home: {fileID: 3634928001127484932}
   dateUI: {fileID: 65953867}
   textBox: {fileID: 6365061516732155725}
   talking: {fileID: 6365061516227431533}
@@ -17888,6 +17889,7 @@ MonoBehaviour:
   - Choose whatever you think will look best on your stunning leafy form.
   dialogOptions1: []
   dialogOptions2: []
+  spinch_home: {fileID: 3634928001127484932}
   mainCanvas: {fileID: 6365061515717500435}
   minigameCanvas: {fileID: 6720378932399594020}
   textBox: {fileID: 6365061516732155725}
@@ -17932,6 +17934,7 @@ MonoBehaviour:
   - ' Now, let us depart!'
   dialogOptions1: []
   dialogOptions2: []
+  spinch_home: {fileID: 3634928001127484932}
   textBox: {fileID: 6365061516732155725}
   talking: {fileID: 6365061516227431533}
   option1txt: {fileID: 6365061516453767163}
