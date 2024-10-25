@@ -4,30 +4,33 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Spinch_to_Dorian_2 : MonoBehaviour
+public class InteractWith1 : MonoBehaviour
 
-
-///rn this is placeholder, will edit asap to the right cases ... this one is when you talk to spinch in the arcade
 
 {
     [Header("sprites")]
     public Cretura cretura;
-    public Spinch spinch;
 
     [HideInInspector] public bool inTextBox = false;
     private bool inCollider = false;
     private bool choice = false;
     private bool advance = false;
 
-    [Header("Dialog")]
-    [SerializeField] List<string> writtenDialog;
-    [SerializeField] List<string> dialogOptions1;
-    [SerializeField] List<string> dialogOptions2;
+    [Header("npcs")]
+    [SerializeField] private GameObject Test_NPC;
+    [SerializeField] private GameObject Spinch_NPC;
+    [SerializeField] private GameObject dorian_NPC;
+    [SerializeField] private GameObject Plant_1_NPC;
+    [SerializeField] private GameObject Plant_2_NPC;
 
-    [SerializeField] private GameObject Spinch;
+
+    [Header("Dialog")]
+    public List<string> writtenDialog;
+    public List<string> dialogOptions1;
+    public List<string> dialogOptions2;
 
     [Header("OtherItems")]
-    public GameObject dateUI;
+    
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
@@ -35,21 +38,43 @@ public class Spinch_to_Dorian_2 : MonoBehaviour
     public Buttoninteractions Buttoninteractions;
     public GameObject floatingBubble;
 
-    [SerializeField] private int text = 1;
-    private int w = 0;
-    private int q = 0;
+  private int text = 1;
+  private int w = 0;
+  private int q = 0;
 
-    [SerializeField] private int dialog = 5; //Make sure this matches the amount of cases
+   [SerializeField] private int dialog = 9; //Make sure this matches the amount of cases
 
     
-
     void Update()
     {
+
 
         if (inCollider == true)
         {
             EnterInteract();
-            
+            Test_NPC.SetActive(false);
+            Spinch_NPC.SetActive(false);
+            dorian_NPC.SetActive(false);
+            Plant_1_NPC.SetActive(false);
+            Plant_2_NPC.SetActive(false);
+
+            GetComponent<Buttoninteractions>().enabled = true;
+
+            if (inTextBox == false)
+            {
+                floatingBubble.SetActive(true);
+
+            }
+        }
+        else if (inCollider == false)
+        {
+            Test_NPC.SetActive(true);
+            Spinch_NPC.SetActive(true);
+            dorian_NPC.SetActive(true);
+            Plant_1_NPC.SetActive(true);
+            Plant_2_NPC.SetActive(true);
+            floatingBubble.SetActive(false);
+            GetComponent<Buttoninteractions>().enabled = false;
         }
 
         if (text >= dialog)
@@ -61,62 +86,108 @@ public class Spinch_to_Dorian_2 : MonoBehaviour
         {
             case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
                 talking.text = (writtenDialog[w]);
-                advance = true;
-                cretura.shock.SetActive(true);
-                cretura.neutral.SetActive(false);
-                spinch.happy.SetActive(true);
-                spinch.neutral.SetActive(false);
 
                 break;
-
-            
-               
 
             case 2:
                 talking.text = (writtenDialog[w]);
-                spinch.happy.SetActive(false);
-                spinch.neutral.SetActive(true);
+
+                break;
+
+            case 3:
+                talking.text = (writtenDialog[w]);
+
                 advance = true; // needs to be placed in the case before a question
                 break;
 
-            case 3: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
-                talking.text = (writtenDialog[w]);
-
-                spinch.happy.SetActive(true);
-                spinch.neutral.SetActive(false);
-                advance = true;
+            case 4: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
+                
+                while (advance == true)   
+              {
+                    q++;
+                    advance = false;
+              }
               
+                ButtonActivate();
 
-                break;
+                choice = true;
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
 
-            case 4:
-                talking.text = (writtenDialog[w]);
-                spinch.happy.SetActive(true);
-                spinch.neutral.SetActive(false);
-                cretura.nervous.SetActive(true); //To change a character's expression use the format NAME.EMOTION.Setactive(true) for the one you want to be active
-                cretura.shock.SetActive(false); //Use NAME.EMOTION.setactive(false) for the one you want to deactivate
-                advance = true; 
+                if (Buttoninteractions.option1clicked == true)
+                {
+                   ButtonDeactiveate();
+                    text++;
+                }
 
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text = 6; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
+                    w = 4; // Where in the dialog inventory to go from
+                }
 
                 break;
 
             case 5:
+
                 talking.text = (writtenDialog[w]);
-               
-                advance = true;
+                cretura.shock.SetActive(true); //To change a character's expression use the format NAME.EMOTION.Setactive(true) for the one you want to be active
+                cretura.neutral.SetActive(false); //Use NAME.EMOTION.setactive(false) for the one you want to deactivate
+                break;
+
+            case 6:
+                talking.text = (writtenDialog[w]);
+                break;
+
+            case 7:
+                talking.text = (writtenDialog[w]);
+
+                advance = true; 
+                break;
+
+            case 8: 
+
+                while (advance == true)
+                {
+                    q++;
+                    advance = false;
+                }
+
+                ButtonActivate();
+
+                choice = true;
+                option1txt.text = (dialogOptions1[q]);
+                option2txt.text = (dialogOptions2[q]);
+
+                if (Buttoninteractions.option1clicked == true)
+                {
+                    cretura.nervous.SetActive(true);
+                    cretura.shock.SetActive(false);
+                    ButtonDeactiveate();
+                    text++;
+                }
+
+                else if (Buttoninteractions.option2clicked == true)
+                {
+                    ButtonDeactiveate();
+                    text = 9;
+                    w = 6;
+                }
 
                 break;
 
+            case 9:
 
-         
+                talking.text = (writtenDialog[w]);
+                break;
 
+                // add new stuff here
 
             default:
                 Debug.LogError("out of case area");
 
                 break;
-                // here is where the option for either cordero or dorian should go--> I'd assume this script ends here, then 
-                ///////
         }
 
     }
@@ -181,16 +252,10 @@ public class Spinch_to_Dorian_2 : MonoBehaviour
             floatingBubble.SetActive(true);
         }
 
-        textoff();
-    }
-
-    void textoff()
-    {
         textBox.gameObject.SetActive(false);
         Buttoninteractions.OptionOne.gameObject.SetActive(false);
         Buttoninteractions.OptionTwo.gameObject.SetActive(false);
     }
-
 
     // Code written by Maxolotl (Jayden Cassar) 
     /*

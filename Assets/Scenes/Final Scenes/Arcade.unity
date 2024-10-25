@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17363277, g: 0.21707366, b: 0.29918697, a: 1}
+  m_IndirectSpecularColor: {r: 0.17363295, g: 0.21707404, b: 0.2991874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 52604835}
   - component: {fileID: 52604840}
   m_Layer: 0
-  m_Name: Plant_1
+  m_Name: Plant_1_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,14 +269,38 @@ MonoBehaviour:
   spinch: {fileID: 6365061516891581243}
   inTextBox: 0
   writtenDialog:
-  - 
-  - 
+  - "Oh! I wasn\u2019t expecting guests. Welcome to my humble abode. "
+  - "Honestly, youngsters these days have it so easy with their \u2018video games\u2019,
+    no manners, the lot of them! Not even a hello from anyone else\u2026 "
+  - At least I can finally meet someone with age and respect!
+  - "[A chilled wind blows throughout the arcade, a tumultuous showdown between two
+    intrepid beasts is about to commence, one a giant bush, and the other, a mere
+    shrub standing in the way of the plant\u2019s mandatory socialisation process\u2026] "
+  - "[The \u2018wind\u2019 being the stale air of a hastily set up standing fan by
+    the two of you.]"
+  - '[The shrub stares back defiantly, as if to say that it has found an opponent
+    worthy of challenge and competition.] '
+  - ' You hold no power over me, you overgrown bush head'
+  - " \u2026"
+  - " \u2026 No, you did nothing wrong, in fact you were very brave to withstand
+    such a showdown between an intimidating force of nature such as myself. "
+  - You have guts I see. Good, I like people with guts.
+  - "You\u2019re much better than the brat we had to follow. "
+  - "The person we were ordered to follow by Spinch Her Excellency was so infatuated
+    with games he didn\u2019t seem to mind the shrubbery always in view\u2026 Even
+    when we were directly behind him."
+  - 'He was a very interesting person. '
+  - " He didn\u2019t really do much outside of playing arcade games, darn kids these
+    days. That\u2019s all I can tell you about him."
+  - Farewell.
   dialogOptions1:
   - 
-  - 
+  - Hello? Mr Plant?
+  - '[Continue to stare intensely]'
   dialogOptions2:
   - 
-  - 
+  - '[Stare at the plant knowingly.] '
+  - ' Did I do something wrong? '
   Plant_1: {fileID: 148199189}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
@@ -286,7 +310,7 @@ MonoBehaviour:
   Buttoninteractions: {fileID: 52604835}
   floatingBubble: {fileID: 296185522}
   text: 1
-  dialog: 11
+  dialog: 18
 --- !u!65 &90511169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -606,7 +630,7 @@ GameObject:
   - component: {fileID: 148199192}
   - component: {fileID: 148199191}
   m_Layer: 0
-  m_Name: dorian_obj
+  m_Name: dorian_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148199189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.98, y: 0.8, z: 30.91}
+  m_LocalPosition: {x: 1.63, y: 0.8, z: 30.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -699,7 +723,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 148199189}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -711,7 +735,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148199189}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5596,7 +5620,7 @@ GameObject:
   - component: {fileID: 1587829747}
   - component: {fileID: 1587829746}
   m_Layer: 0
-  m_Name: Spinch
+  m_Name: Spinch_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5610,7 +5634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587829744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.509, y: 0.8, z: 22.614}
+  m_LocalPosition: {x: -32.22, y: 0.8, z: 25.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5633,14 +5657,17 @@ MonoBehaviour:
   spinch: {fileID: 6365061516891581243}
   inTextBox: 0
   writtenDialog:
-  - 
-  - 
-  - 
+  - "Here we are\u2026 the \u2018arcade\u2019 as they call it. Seems like a marketplace
+    for entertainment of some sort\u2026"
+  - "You may need to figure out what Dorian will want to do here and what he likes
+    for the best date possible\u2026"
+  - I have taken the liberty of deploying several plants in the area that have been
+    tracking him for a while.
+  - "They\u2019re very well hidden and well\u2026 vegetated?"
+  - You should use them to your advantage.
   dialogOptions1:
   - 
-  - 
   dialogOptions2:
-  - 
   - 
   Spinch: {fileID: 1587829744}
   dateUI: {fileID: 6365061516506848969}
@@ -5651,7 +5678,7 @@ MonoBehaviour:
   Buttoninteractions: {fileID: 1587829747}
   floatingBubble: {fileID: 296185522}
   text: 1
-  dialog: 11
+  dialog: 5
 --- !u!114 &1587829747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5690,7 +5717,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1587829744}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -5702,7 +5729,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587829744}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7004,7 +7031,7 @@ GameObject:
   - component: {fileID: 1851212438}
   - component: {fileID: 1851212443}
   m_Layer: 0
-  m_Name: Plant_2
+  m_Name: Plant_2_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7134,14 +7161,24 @@ MonoBehaviour:
   spinch: {fileID: 6365061516891581243}
   inTextBox: 0
   writtenDialog:
-  - 
-  - 
+  - Greetings sir!  I HAVE THE INTEL THAT YOU REQUIRE SIR
+  - 'REQUESTING PERMISSION TO CONVEY INTELLIGENCE SIR! '
+  - 'very well SIR! '
+  - ' Sir! I am a soldier tasked with gaining information on the target SIR! '
+  - ' I shall tell you VERY important information SIR! '
+  - ' I have learnt that the target is indeed a Gamer!'
+  - "Maybe too much of a gamer\u2026SIR!-"
+  - 'However I may have failed my mission SIR, AS I was spotted during the operation! '
+  - "He seemed to notice me while he was in his room, but didn\u2019t seem to mind. "
+  - ' I have a feeling he might catch onto your original form SIR, please be careful!'
+  - "[You leave the scene, somewhat concerned about the soldier. It seemed\u2026
+    intense. ] "
   dialogOptions1:
   - 
-  - 
+  - ' ..Permission granted. '
   dialogOptions2:
   - 
-  - 
+  - ' I''m sorry, what?'
   Plant_2: {fileID: 1851212436}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
@@ -7151,7 +7188,7 @@ MonoBehaviour:
   Buttoninteractions: {fileID: 1851212438}
   floatingBubble: {fileID: 296185522}
   text: 1
-  dialog: 11
+  dialog: 14
 --- !u!65 &1856615397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10440,8 +10477,8 @@ GameObject:
   - component: {fileID: 7213965475578972399}
   - component: {fileID: 4856868785714209126}
   - component: {fileID: 646498309589846331}
-  - component: {fileID: 8151416631121179546}
   - component: {fileID: 2661337944878524039}
+  - component: {fileID: 7213965475578972400}
   m_Layer: 0
   m_Name: Test_NPC
   m_TagString: Untagged
@@ -11107,7 +11144,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 3634928001573001088}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -16406,7 +16443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6365061517153049785}
   m_LocalRotation: {x: -0, y: 0.7074811, z: -0, w: 0.70673233}
-  m_LocalPosition: {x: -62.85, y: -3.557, z: 5.59}
+  m_LocalPosition: {x: -62.43, y: -3.557, z: 5.59}
   m_LocalScale: {x: 0.84778434, y: 1.0050905, z: 0.8939589}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16427,8 +16464,9 @@ GameObject:
   - component: {fileID: 6365061517153049788}
   - component: {fileID: 6365061517153049789}
   - component: {fileID: 6365061517153049786}
-  - component: {fileID: 6365061517153049787}
   - component: {fileID: 6365061517153049790}
+  - component: {fileID: 6365061517153049792}
+  - component: {fileID: 6365061517153049793}
   m_Layer: 0
   m_Name: Test player
   m_TagString: Untagged
@@ -16452,21 +16490,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6365061517153049787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6365061517153049785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad29944c77ee3b742bd3f22e1657138f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phoneMenu: {fileID: 6365061517153049790}
-  interactWith: {fileID: 8151416631121179546}
-  walkSpeed: 5
 --- !u!23 &6365061517153049788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16550,6 +16573,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6365061517153049785}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6365061517153049792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365061517153049785}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd03aab409fc89e4ba6860bfa9931908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phoneMenu: {fileID: 6365061517153049790}
+  interactWith: {fileID: 7213965475578972400}
+  std2: {fileID: 1587829746}
+  dm: {fileID: 148199191}
+  dp1: {fileID: 52604840}
+  dp2: {fileID: 1851212443}
+  walkSpeed: 5
+--- !u!114 &6365061517153049793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365061517153049785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a05bcacc2b2ba14aa9936576f260697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phoneMenu: {fileID: 6365061517153049790}
+  interactWith: {fileID: 7213965475578972400}
+  walkSpeed: 5
 --- !u!1 &6365061517181304432
 GameObject:
   m_ObjectHideFlags: 0
@@ -17851,7 +17908,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3634928001573001088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17886,6 +17943,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7213965475578972400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634928001573001088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464b4343e703ccc42a5078e3c54ec126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  inTextBox: 0
+  Test_NPC: {fileID: 3634928001573001088}
+  Spinch_NPC: {fileID: 1587829744}
+  dorian_NPC: {fileID: 148199189}
+  Plant_1_NPC: {fileID: 52604833}
+  Plant_2_NPC: {fileID: 1851212436}
+  writtenDialog:
+  - 
+  - a
+  - a
+  - a
+  - a
+  - a
+  - a
+  - a
+  dialogOptions1:
+  - 
+  - a
+  dialogOptions2:
+  - 
+  - a
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 2661337944878524039}
+  floatingBubble: {fileID: 296185522}
+  dialog: 9
 --- !u!1 &7233249892811563683
 GameObject:
   m_ObjectHideFlags: 0
@@ -18381,48 +18479,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.641179, y: 2.961599, z: 1.4548343}
   m_Center: {x: -0.00000035762795, y: -0.00000047683716, z: 0.00000014901164}
---- !u!114 &8151416631121179546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3634928001573001088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5569f7d3989454e43a97456a49f545a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cretura: {fileID: 6365061516831407452}
-  inTextBox: 0
-  Test_NPC_spinch: {fileID: 0}
-  front_NPC: {fileID: 0}
-  plant1_NPC: {fileID: 0}
-  plant2_NPC: {fileID: 0}
-  codero_NPC: {fileID: 0}
-  writtenDialog:
-  - Come on in!
-  - This is our test opening
-  - So you can't order but can look around!!
-  - Glad you asked!! we finally finished building ^^
-  - 'I promise it will be good '
-  - anything else?
-  - Hope you have a great time :D
-  dialogOptions1:
-  - '{ignore}'
-  - so it's finally open?
-  - nope!!
-  dialogOptions2:
-  - '{ignore}'
-  - yippeeee!!
-  - all goods :D
-  textBox: {fileID: 6365061516506848969}
-  talking: {fileID: 6365061515930555881}
-  option1txt: {fileID: 6365061516811468415}
-  option2txt: {fileID: 6365061517064598145}
-  Buttoninteractions: {fileID: 2661337944878524039}
-  floatingBubble: {fileID: 296185522}
-  dialog: 9
 --- !u!1 &8234288219046684359
 GameObject:
   m_ObjectHideFlags: 0
