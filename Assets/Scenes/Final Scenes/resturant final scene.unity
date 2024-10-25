@@ -1780,7 +1780,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - ' [Continue talking to the paranoid plant]'
-  Test_NPC_Plant1: {fileID: 0}
+  Test_NPC_Plant1: {fileID: 406011118}
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
   option1txt: {fileID: 527615846}
@@ -3449,7 +3449,7 @@ MonoBehaviour:
   - 
   - " I wonder if it\u2019s the same chain we have back at home."
   - Perfectly reasonable.
-  Test_NPC_spinch: {fileID: 0}
+  Test_NPC_spinch: {fileID: 725266105}
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
   option1txt: {fileID: 527615846}
@@ -4837,7 +4837,7 @@ MonoBehaviour:
   - 'Good luck, field agent. Cordero is in the dining room. '
   dialogOptions1: []
   dialogOptions2: []
-  Test_NPC_Plant2: {fileID: 0}
+  Test_NPC_Plant2: {fileID: 1112867312}
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
   option1txt: {fileID: 527615846}
@@ -7686,7 +7686,7 @@ MonoBehaviour:
   - "No thanks, I\u2019d rather get to know you more, actually."
   - I contemplate in the woods, often of my own human mortality.
   - "My cat texted me saying she\u2019s fallen into a coma, I need to leave quickly! "
-  Test_NPC_Cordero: {fileID: 0}
+  Test_NPC_Cordero: {fileID: 1913144885}
   textBox: {fileID: 211478480}
   talking: {fileID: 1659923696}
   option1txt: {fileID: 527615846}
@@ -8922,7 +8922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cretura: {fileID: 406979653}
   inTextBox: 0
-  TEST_NPC: {fileID: 0}
+  TEST_NPC: {fileID: 7648491487325171353}
   writtenDialog:
   - Come on in!
   - This is our test opening
