@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Cordero_main : MonoBehaviour
 {
@@ -622,6 +623,7 @@ public class Cordero_main : MonoBehaviour
 
                 advance = true;
 
+                SceneManager.LoadScene("House");
                 break;
 
              //add a transition to black, then you return home

@@ -12,6 +12,7 @@ public class Spinch_to_cordi_2 : MonoBehaviour
     private bool inCollider = false;
     private bool choice = false;
     private bool advance = false;
+    public bool leave;
 
     public List<string> writtenDialog;
     public List<string> dialogOptions1;
@@ -173,6 +174,8 @@ public class Spinch_to_cordi_2 : MonoBehaviour
 
                 spinch.happy.SetActive(true);
                 spinch.neutral.SetActive(false);
+
+                leave = true;
                 break;
 
           //transition to resturant

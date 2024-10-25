@@ -10215,6 +10215,7 @@ GameObject:
   - component: {fileID: 8103695659261853723}
   - component: {fileID: 8918280150766367398}
   - component: {fileID: 8918280150766367399}
+  - component: {fileID: 8918280150766367400}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -13069,6 +13070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99149030fa762144dba042a0b78ec09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  all: {fileID: 0}
   neutral: {fileID: 6365061515805026203}
   blush: {fileID: 6365061517157312500}
   confused: {fileID: 6365061517165031544}
@@ -14639,6 +14641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b37d6132e4cdb438fde65d54393b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  all: {fileID: 0}
   neutral: {fileID: 6365061515764291147}
   angry: {fileID: 6365061515452632916}
   shock: {fileID: 6365061516268780145}
@@ -15006,6 +15009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a251d1f12804230438a0046017e6be3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  all: {fileID: 0}
   neutral: {fileID: 6365061516590170406}
   blush: {fileID: 6365061517379774948}
   confused: {fileID: 6365061516756233772}
@@ -17914,6 +17918,7 @@ MonoBehaviour:
   cretura: {fileID: 6365061516400305368}
   spinch: {fileID: 6365061516381057727}
   inTextBox: 0
+  leave: 0
   writtenDialog:
   - ...
   - '[Her nose scrunches up briefly as she looks you up and down.]  '
@@ -19055,11 +19060,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155298511073043095}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7239332, y: 3.8057451, z: 0.9788519}
-  m_Center: {x: 0.00000023841858, y: 0, z: -0.28749818}
+  m_Size: {x: 2.7239332, y: 3.8057451, z: 1.1390826}
+  m_Center: {x: 0.00000023841858, y: 0, z: -0.3676135}
+--- !u!114 &8918280150766367400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155298511073043095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26bc8899c109e54086155e74e1f1ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinch_To_Cordi_2: {fileID: 7213965475269775726}
 --- !u!114 &8936440318883424533
 MonoBehaviour:
   m_ObjectHideFlags: 0
