@@ -18,6 +18,8 @@ public class Plant_2_cordi : MonoBehaviour
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
 
+    [SerializeField] private GameObject Test_NPC_Plant2;
+
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;

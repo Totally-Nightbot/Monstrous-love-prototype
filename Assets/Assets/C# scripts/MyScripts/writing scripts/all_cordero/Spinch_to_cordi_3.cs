@@ -16,7 +16,7 @@ private bool advance = false;
     [SerializeField] List<string> writtenDialog;
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
-
+    [SerializeField] private GameObject Test_NPC_spinch;
 public GameObject textBox;
 public TextMeshProUGUI talking;
 public TextMeshProUGUI option1txt;

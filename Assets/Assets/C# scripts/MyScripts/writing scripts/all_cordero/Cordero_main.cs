@@ -20,6 +20,8 @@ public class Cordero_main : MonoBehaviour
     [SerializeField] List<string> dialogOptions1;
     [SerializeField] List<string> dialogOptions2;
 
+    [SerializeField] private GameObject Test_NPC_Cordero;
+
     [Header("OtherItems")]
     public GameObject textBox;
     public TextMeshProUGUI talking;
