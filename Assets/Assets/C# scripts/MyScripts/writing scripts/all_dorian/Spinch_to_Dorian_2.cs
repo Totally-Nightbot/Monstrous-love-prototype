@@ -20,9 +20,11 @@ public class Spinch_to_Dorian_2 : MonoBehaviour
     private bool advance = false;
 
     [Header("Dialog")]
-    public List<string> writtenDialog;
-    public List<string> dialogOptions1;
-    public List<string> dialogOptions2;
+    [SerializeField] List<string> writtenDialog;
+    [SerializeField] List<string> dialogOptions1;
+    [SerializeField] List<string> dialogOptions2;
+
+    [SerializeField] private GameObject Spinch;
 
     [Header("OtherItems")]
     public GameObject dateUI;
@@ -40,6 +42,7 @@ public class Spinch_to_Dorian_2 : MonoBehaviour
    [SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
 
     
+
     void Update()
     {
 

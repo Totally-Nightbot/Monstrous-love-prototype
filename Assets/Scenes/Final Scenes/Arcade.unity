@@ -277,6 +277,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - 
+  Plant_1: {fileID: 0}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
   talking: {fileID: 6365061515930555881}
@@ -605,7 +606,7 @@ GameObject:
   - component: {fileID: 148199192}
   - component: {fileID: 148199191}
   m_Layer: 0
-  m_Name: dorian
+  m_Name: dorian_obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,6 +651,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - 
+  dorian_obj: {fileID: 0}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
   talking: {fileID: 6365061515930555881}
@@ -5525,7 +5527,7 @@ GameObject:
   - component: {fileID: 1587829747}
   - component: {fileID: 1587829746}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Spinch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5571,6 +5573,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - 
+  Spinch: {fileID: 0}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
   talking: {fileID: 6365061515930555881}
@@ -7065,6 +7068,7 @@ MonoBehaviour:
   dialogOptions2:
   - 
   - 
+  Plant_2: {fileID: 0}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
   talking: {fileID: 6365061515930555881}
@@ -10365,7 +10369,7 @@ GameObject:
   - component: {fileID: 8151416631121179546}
   - component: {fileID: 2661337944878524039}
   m_Layer: 0
-  m_Name: 'Test NPC '
+  m_Name: Test_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18313,6 +18317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cretura: {fileID: 6365061516831407452}
   inTextBox: 0
+  TEST_NPC: {fileID: 0}
   writtenDialog:
   - Come on in!
   - This is our test opening
