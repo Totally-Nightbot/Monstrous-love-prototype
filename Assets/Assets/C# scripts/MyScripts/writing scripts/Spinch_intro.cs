@@ -22,6 +22,8 @@ public class Spinch_intro : MonoBehaviour
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
+    [SerializeField] private GameObject spinch_home;
+
     [Header("OtherItems")]
     public GameObject dateUI;
     public GameObject textBox;

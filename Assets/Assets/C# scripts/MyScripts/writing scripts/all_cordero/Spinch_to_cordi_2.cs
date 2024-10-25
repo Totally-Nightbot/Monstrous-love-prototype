@@ -17,6 +17,8 @@ public class Spinch_to_cordi_2 : MonoBehaviour
     public List<string> dialogOptions1;
     public List<string> dialogOptions2;
 
+    [SerializeField] private GameObject spinch_home;
+
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
