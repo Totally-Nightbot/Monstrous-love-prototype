@@ -145,7 +145,7 @@ public class Spinch_intro : MonoBehaviour
                 talking.text = (writtenDialog[w]);
 
                 spinch.happy.SetActive(true);
-                spinch.neutral.SetActive(false);
+                spinch.sad.SetActive(false);
                 cretura.neutral.SetActive(true);
                 cretura.blush.SetActive(false);
 
