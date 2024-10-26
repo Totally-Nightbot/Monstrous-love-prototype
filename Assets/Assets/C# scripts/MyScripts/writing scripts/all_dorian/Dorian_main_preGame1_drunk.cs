@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dorian_main: MonoBehaviour
+public class Dorian_main_preGame1_drunk : MonoBehaviour
 
 
-///rn this is placeholder, will edit asap to the right cases ... this one is when you talk to dorian in the arcade
+///rn this is placeholder, will edit asap to the right cases ... this one is when you talk to dorian in the arcade, just before the first game
 
 {
     [Header("sprites")]
@@ -39,7 +39,7 @@ public class Dorian_main: MonoBehaviour
   private int w = 0;
   private int q = 0;
 
-   [SerializeField] private int dialog = 11; //Make sure this matches the amount of cases
+   [SerializeField] private int dialog = 6; //Make sure this matches the amount of cases
 
    
 
@@ -59,7 +59,10 @@ public class Dorian_main: MonoBehaviour
 
         switch (text) // the main text blocks of the chatting stuff 
         {
-            case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
+           
+            // this is the outcome of the 'i want a drink' choice in the first dorian dialogue set, we are at a bar
+            case 1: 
+                
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.neutral.SetActive(true);
@@ -71,32 +74,7 @@ public class Dorian_main: MonoBehaviour
 
             case 2:
                 talking.text = (writtenDialog[w]);
-               
-                while (advance == true)
-                {
-                    q++;
-                    advance = false;
-                }
-
-                ButtonActivate();
-
-                choice = true;
-                option1txt.text = (dialogOptions1[q]);
-                option2txt.text = (dialogOptions2[q]);
-
-                if (Buttoninteractions.option1clicked == true)
-                {
-                    ButtonDeactiveate();
-                    text++;
-                }
-
-                else if (Buttoninteractions.option2clicked == true)
-                {
-                    ButtonDeactiveate();
-                    text = 3; // Where you want the second option to begin from (this can also be used for if both options supply diffrent information) 
-                    w = 1; // Where in the dialog inventory to go from
-                }
-
+                advance = true;
                 break;
                
 
@@ -105,88 +83,39 @@ public class Dorian_main: MonoBehaviour
                 dorian.happy.SetActive(false);
                 dorian.sad.SetActive(true);
                 advance = true; // needs to be placed in the case before a question
+                //camera pans to a twig on the ground
                 break;
 
-            case 4: // This is the button dialogs. to change the text add your option into the coresponding dialog options inventory in the inspect menu (1 for opt 1, 2 for opt 2) 
+            case 4:
                 talking.text = (writtenDialog[w]);
-
-                dorian.happy.SetActive(true);
-                dorian.sad.SetActive(false);
                 advance = true;
-              
-
                 break;
+
 
             case 5:
                 talking.text = (writtenDialog[w]);
-                dorian.happy.SetActive(false);
-                dorian.neutral.SetActive(true);
-                cretura.shock.SetActive(true); //To change a character's expression use the format NAME.EMOTION.Setactive(true) for the one you want to be active
-                cretura.neutral.SetActive(false); //Use NAME.EMOTION.setactive(false) for the one you want to deactivate
-                advance = true; 
-
-
+                advance = true;
                 break;
+
 
             case 6:
                 talking.text = (writtenDialog[w]);
-                cretura.blush.SetActive(true);
-                cretura.shock.SetActive(false);
-                advance = true;
-
-                break;
-
-            case 7:
-                talking.text = (writtenDialog[w]);
-                dorian.sad.SetActive(true);
-                dorian.neutral.SetActive(false);
-                advance = true; 
-                break;
-
-            case 8:
-                
-                talking.text = (writtenDialog[w]);
-
-                dorian.happy.SetActive(true);
-                dorian.neutral.SetActive(false);
-                cretura.neutral.SetActive(true);
-                cretura.blush.SetActive(false);
-
-                advance = true;
-              
-
-                break;
-
-            case 9:
-
-                talking.text = (writtenDialog[w]);
-                dorian.neutral.SetActive(true);
-                dorian.happy.SetActive(false);
                 advance = true;
                 break;
 
-            // add new stuff here
-            case 10:
-                dorian.happy.SetActive(true);
-                dorian.neutral.SetActive(false);
-                cretura.nervous.SetActive(true);
-                cretura.neutral.SetActive(false);
-                advance = true;
-                break;
 
-            case 11:
-                textoff();
-                dateUI.gameObject.SetActive(true);
-               // Debug.Log("activate date sequence");
+            //player goes to the arcade machine where dorian is after this script for minigame 1
 
-                break;
+               
+
+
+            // scene ends
 
             default:
                 Debug.LogError("out of case area");
 
                 break;
-                // here is where the option for either cordero or dorian should go--> I'd assume this script ends here, then 
-                ///////
+               
         }
 
     }

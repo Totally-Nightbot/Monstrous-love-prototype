@@ -301,7 +301,7 @@ MonoBehaviour:
   - 
   - '[Stare at the plant knowingly.] '
   - ' Did I do something wrong? '
-  Plant_1: {fileID: 148199189}
+  Plant_1: {fileID: 52604833}
   dateUI: {fileID: 6365061516506848969}
   textBox: {fileID: 6365061515930555892}
   talking: {fileID: 6365061515930555881}
@@ -309,7 +309,7 @@ MonoBehaviour:
   option2txt: {fileID: 6365061517064598145}
   Buttoninteractions: {fileID: 52604835}
   floatingBubble: {fileID: 296185522}
-  text: 1
+  text: 14
   dialog: 18
 --- !u!65 &90511169
 BoxCollider:
@@ -628,7 +628,12 @@ GameObject:
   - component: {fileID: 148199194}
   - component: {fileID: 148199193}
   - component: {fileID: 148199192}
+  - component: {fileID: 148199197}
   - component: {fileID: 148199191}
+  - component: {fileID: 148199198}
+  - component: {fileID: 148199200}
+  - component: {fileID: 148199199}
+  - component: {fileID: 148199201}
   m_Layer: 0
   m_Name: dorian_NPC
   m_TagString: Untagged
@@ -667,13 +672,20 @@ MonoBehaviour:
   dorian: {fileID: 6365061515339488709}
   inTextBox: 0
   writtenDialog:
-  - 
-  - 
+  - "WH-.. HOW\u2013 haa\u2026 haha!"
+  - "You\u2019re insane you know, how crazy can you be to win on the first try? "
+  - "Are you sure you\u2019ve never played a video game before, or were you just
+    pulling my leg? "
+  - " I guess that just makes you that much cooler, let\u2019s head up to the next
+    game while we\u2019re at it."
+  - " Hey! It\u2019s all good, it is your first time playing a game after all. "
+  - "Just relax and have fun, that's what this arcade\u2019s for. We can leave the
+    hardcore stressful games for later. "
+  - "Here\u2026 Let\u2019s try out another game, just up ahead"
+  - ' I''ll go easy on you this time. Maybe'
   dialogOptions1:
   - 
-  - 
   dialogOptions2:
-  - 
   - 
   dorian_obj: {fileID: 148199189}
   dateUI: {fileID: 6365061516506848969}
@@ -684,7 +696,7 @@ MonoBehaviour:
   Buttoninteractions: {fileID: 148199192}
   floatingBubble: {fileID: 296185522}
   text: 1
-  dialog: 11
+  dialog: 8
 --- !u!114 &148199192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +790,205 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148199189}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &148199197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148199189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b5c1b257518d04b8cb4ca3de7773da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  dorian: {fileID: 6365061515339488709}
+  inTextBox: 0
+  writtenDialog:
+  - " Hey, you\u2019re my date right? "
+  - '*yawn* Pleasure to meet you.'
+  - Where do you want to start? We can go to the arcade machines first, or maybe
+    grab a quick drink at the bar?
+  - "Great choice. I\u2019ve been really itching for a good mocktail. "
+  - ' Have you been to an arcade before?'
+  - "[You shake your thistly head, rusting a few leaves. Humans with all their strange
+    hobbies..  how odd\u2026]"
+  - "Wait, you don\u2019t know what video games are?"
+  - "[You shake your head nervously. The closest thing you\u2019ve seen regarding
+    videos and games was the one time you tried out Spinch\u2019s tablet.]"
+  - "[It ended in 15 mobile game downloads, $1500 in credit card debt, and you sobbing
+    in a corner over getting nothing from your 1000 \u2018free\u2019 gacha pulls.]"
+  - '[What a nightmare.]'
+  - "So you\u2019ve never played games, huh?"
+  - "\u2026"
+  - "Here, this is what we\u2019ll try and play. Don\u2019t worry too much about
+    winning, just have fun."
+  dialogOptions1:
+  - 
+  - "Arcade\u2026machines..?"
+  dialogOptions2:
+  - 
+  - "Let\u2019s go grab drinks."
+  dorian_obj: {fileID: 148199189}
+  dateUI: {fileID: 6365061516506848969}
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 148199192}
+  floatingBubble: {fileID: 296185522}
+  text: 1
+  dialog: 15
+--- !u!114 &148199198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148199189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9170c873b23dd43aaa86a11d7a5abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  dorian: {fileID: 6365061515339488709}
+  inTextBox: 0
+  writtenDialog:
+  - "Here\u2019s my favourite game in the arcade! Super modern stuff compared to
+    the rest of the machines here, but worth it. "
+  - Here, you have a try first.
+  - "[As you reach out to the rectangular cube, you can sense that something is off\u2026uncomfortably
+    so\u2026]"
+  - "[Your leaves scatter all over the arcade in a frazzle as the arcade\u2019s power
+    suddenly drops.] [Your leaves scatter all over the arcade in a frazzle as the
+    arcade\u2019s power suddenly drops.] "
+  - "[ You are shocked by the encounter and seem to have \u2018dropped\u2019 parts
+    of your body in a panic, you must find them before the power turns on, quickly!
+    ] "
+  - '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+  dialogOptions1:
+  - 
+  dialogOptions2:
+  - 
+  dorian_obj: {fileID: 148199189}
+  dateUI: {fileID: 6365061516506848969}
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 148199192}
+  floatingBubble: {fileID: 296185522}
+  text: 1
+  dialog: 6
+--- !u!114 &148199199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148199189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f7b78d0debbf84faf0eda26fc2f453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  dorian: {fileID: 6365061515339488709}
+  inTextBox: 0
+  writtenDialog:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  dialogOptions1: []
+  dialogOptions2: []
+  dorian_obj: {fileID: 148199189}
+  dateUI: {fileID: 6365061516506848969}
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 148199192}
+  floatingBubble: {fileID: 296185522}
+  text: 1
+  dialog: 7
+--- !u!114 &148199200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148199189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d2cab9c04912c4da653fe40b79746b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  dorian: {fileID: 6365061515339488709}
+  inTextBox: 0
+  writtenDialog:
+  - ' You okay?'
+  - Oh well, at least nothing major happened to the machines.
+  - "Mm? What's wrong with your clothes? They seem to be all\u2026 out of place? "
+  - '!!!!!! '
+  - ' The blackout really spooked you, huh?'
+  - "Let\u2019s keep this date going."
+  - (you proceed to enjoy the rest of the date with dorian. with dorian none the
+    wiser to your true form... at least that's how it seems.
+  dialogOptions1: []
+  dialogOptions2: []
+  dorian_obj: {fileID: 148199189}
+  dateUI: {fileID: 6365061516506848969}
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 148199192}
+  floatingBubble: {fileID: 296185522}
+  text: 1
+  dialog: 7
+--- !u!114 &148199201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148199189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d6da32b3bbe7645b405d8ea06bd19e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cretura: {fileID: 6365061516831407452}
+  dorian: {fileID: 6365061515339488709}
+  inTextBox: 0
+  writtenDialog:
+  - Ah, that was real nice, actually.
+  - "I think you scared the bartender a little bit by pulling your \u2018eating the
+    glass\u2019 trick, though."
+  - "..We should go try out some of those arcades. It\u2019s what we\u2019re here
+    for, right? "
+  - A great way to learn about your character, too.
+  - " I\u2019ll be back. I\u2019ll meet you there in a minute."
+  - see you soon.
+  dialogOptions1: []
+  dialogOptions2: []
+  dorian_obj: {fileID: 148199189}
+  dateUI: {fileID: 6365061516506848969}
+  textBox: {fileID: 6365061515930555892}
+  talking: {fileID: 6365061515930555881}
+  option1txt: {fileID: 6365061516811468415}
+  option2txt: {fileID: 6365061517064598145}
+  Buttoninteractions: {fileID: 148199192}
+  floatingBubble: {fileID: 296185522}
+  text: 1
+  dialog: 6
 --- !u!1 &150333385
 GameObject:
   m_ObjectHideFlags: 0
@@ -16588,7 +16799,9 @@ MonoBehaviour:
   phoneMenu: {fileID: 6365061517153049790}
   interactWith: {fileID: 7213965475578972400}
   std2: {fileID: 1587829746}
-  dm: {fileID: 148199191}
+  dmgm1: {fileID: 0}
+  dmpg: {fileID: 0}
+  dmi: {fileID: 0}
   dp1: {fileID: 52604840}
   dp2: {fileID: 1851212443}
   walkSpeed: 5
