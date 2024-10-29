@@ -7,7 +7,7 @@ using UnityEngine;
 public class Plant_1_cordi : MonoBehaviour
 {
     public Cretura cretura;
-    public Spinch spinch; //plant sprite go here?
+ 
 
    
     [HideInInspector] public bool inTextBox = false;
@@ -21,8 +21,8 @@ public class Plant_1_cordi : MonoBehaviour
     [SerializeField] List<string> dialogOptions2;
 
     [Header("npcs")]
+    public GameObject plant;
     [SerializeField] private GameObject Test_NPC_spinch;
-    [SerializeField] private GameObject front_NPC;
     [SerializeField] private GameObject plant1_NPC;
     [SerializeField] private GameObject plant2_NPC;
     [SerializeField] private GameObject codero_NPC;
@@ -48,7 +48,7 @@ public class Plant_1_cordi : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
-            front_NPC.SetActive(false);
+           
             Test_NPC_spinch.SetActive(false);
             plant2_NPC.SetActive(false);
             codero_NPC.SetActive(false);
@@ -62,7 +62,7 @@ public class Plant_1_cordi : MonoBehaviour
         }
         else if (inCollider == false)
         {
-            front_NPC.SetActive(true);
+            
             Test_NPC_spinch.SetActive(true);
             plant2_NPC.SetActive(true);
             codero_NPC.SetActive(true);
@@ -83,7 +83,6 @@ public class Plant_1_cordi : MonoBehaviour
             case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
                 talking.text = (writtenDialog[w]);
                 advance = true;
-                
 
                 break;
 
@@ -242,6 +241,7 @@ public class Plant_1_cordi : MonoBehaviour
 
         if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
         {
+            plant.SetActive(true);
             floatingBubble.SetActive(false);
             inTextBox = true;
             textBox.gameObject.SetActive(true);
@@ -259,6 +259,7 @@ public class Plant_1_cordi : MonoBehaviour
             textBox.gameObject.SetActive(false);
             Buttoninteractions.OptionOne.gameObject.SetActive(false);
             Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+            plant.SetActive(false);
         }
 
     }
@@ -295,7 +296,6 @@ public class Plant_1_cordi : MonoBehaviour
         {
             floatingBubble.SetActive(true);
         }
-
         textBox.gameObject.SetActive(false);
         Buttoninteractions.OptionOne.gameObject.SetActive(false);
         Buttoninteractions.OptionTwo.gameObject.SetActive(false);

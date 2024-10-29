@@ -20,7 +20,6 @@ private bool advance = false;
 
     [Header("npcs")]
     [SerializeField] private GameObject Test_NPC_spinch;
-    [SerializeField] private GameObject front_NPC;
     [SerializeField] private GameObject plant1_NPC;
     [SerializeField] private GameObject plant2_NPC;
     [SerializeField] private GameObject codero_NPC;
@@ -46,7 +45,7 @@ void Update()
     if (inCollider == true)
     {
         EnterInteract();
-            front_NPC.SetActive(false);
+           
             plant1_NPC.SetActive(false);
             plant2_NPC.SetActive(false);
             codero_NPC.SetActive(false);
@@ -60,7 +59,7 @@ void Update()
         }
     else if (inCollider == false)
         {
-            front_NPC.SetActive(true);
+         
             plant1_NPC.SetActive(true);
             plant2_NPC.SetActive(true);
             codero_NPC.SetActive(true);

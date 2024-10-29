@@ -62,6 +62,7 @@ public class Spinch_to_cordi_2 : MonoBehaviour
                 cretura.blush.SetActive(true);
                 cretura.neutral.SetActive(false);
                 spinch.unique.SetActive(true);
+                spinch.happy.SetActive(false);
                 spinch.neutral.SetActive(false);
 
                 break;

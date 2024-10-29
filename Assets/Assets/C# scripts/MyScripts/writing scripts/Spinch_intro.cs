@@ -60,7 +60,6 @@ public class Spinch_intro : MonoBehaviour
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.neutral.SetActive(true);
-                cretura.neutral.SetActive(false);
                 spinch.happy.SetActive(true);
                 spinch.neutral.SetActive(false);
 
@@ -187,7 +186,6 @@ public class Spinch_intro : MonoBehaviour
         }
 
     }
-
 
     void EnterInteract()// for when the player enters, exits and advances dialog
     {

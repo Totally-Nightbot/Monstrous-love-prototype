@@ -20,7 +20,7 @@ public class Plant_2_cordi : MonoBehaviour
 
     [Header("npcs")]
     [SerializeField] private GameObject Test_NPC_spinch;
-    [SerializeField] private GameObject front_NPC;
+    public GameObject plant;
     [SerializeField] private GameObject plant1_NPC;
     [SerializeField] private GameObject plant2_NPC;
     [SerializeField] private GameObject codero_NPC;
@@ -45,7 +45,6 @@ public class Plant_2_cordi : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
-            front_NPC.SetActive(false);
             Test_NPC_spinch.SetActive(false);
             plant1_NPC.SetActive(false);
             codero_NPC.SetActive(false);
@@ -59,7 +58,6 @@ public class Plant_2_cordi : MonoBehaviour
         }
         else if (inCollider == false)
         {
-            front_NPC.SetActive(true);
             Test_NPC_spinch.SetActive(true);
             plant1_NPC.SetActive(true);
             codero_NPC.SetActive(true);
@@ -78,6 +76,7 @@ public class Plant_2_cordi : MonoBehaviour
         {
             case 1: // This is the main talking points for the character. To edit this stuff go to the inventory in the inspect menu titled written dialog
                 talking.text = (writtenDialog[w]);
+                cretura.neutral.SetActive(true);
                 advance = true;
 
 
@@ -210,6 +209,7 @@ public class Plant_2_cordi : MonoBehaviour
 
         if (Input.GetButtonDown("Interact")) // when the player presses the interact button, then the quest will be given via an on screen UI text speech 
         {
+            plant.SetActive(true);
             floatingBubble.SetActive(false);
             inTextBox = true;
             textBox.gameObject.SetActive(true);
@@ -223,6 +223,7 @@ public class Plant_2_cordi : MonoBehaviour
 
         else if (Input.GetButtonDown("Submit") && text >= dialog)
         {
+            plant.SetActive(false);
             inTextBox = false;
             textBox.gameObject.SetActive(false);
             Buttoninteractions.OptionOne.gameObject.SetActive(false);

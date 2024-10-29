@@ -23,18 +23,21 @@ public class Cordero_main : MonoBehaviour
 
     [Header("npcs")]
     [SerializeField] private GameObject Test_NPC_spinch;
-    [SerializeField] private GameObject front_NPC;
+   
     [SerializeField] private GameObject plant1_NPC;
     [SerializeField] private GameObject plant2_NPC;
     [SerializeField] private GameObject codero_NPC;
 
     [Header("OtherItems")]
+    public GameObject player;
+    public GameObject pos;
     public GameObject textBox;
     public TextMeshProUGUI talking;
     public TextMeshProUGUI option1txt;
     public TextMeshProUGUI option2txt;
     public Buttoninteractions Buttoninteractions;
     public GameObject floatingBubble;
+    public GameObject fadeToB;
 
     private int text = 1;
     private int w = 0;
@@ -48,28 +51,26 @@ public class Cordero_main : MonoBehaviour
         if (inCollider == true)
         {
             EnterInteract();
-            front_NPC.SetActive(false);
+            
             Test_NPC_spinch.SetActive(false);
             plant2_NPC.SetActive(false);
             plant1_NPC.SetActive(false);
             cordero.all.SetActive(true);
-            if(inTextBox == false)
-
             GetComponent<Buttoninteractions>().enabled = true;
+           
+            if (inTextBox == false)
             {
                 floatingBubble.SetActive(true);
             }
         }
         else if (inCollider == false)
         {
-            front_NPC.SetActive(true);
+           
             Test_NPC_spinch.SetActive(true);
             plant2_NPC.SetActive(true);
             plant1_NPC.SetActive(true);
-            floatingBubble.SetActive(false);
             cordero.all.SetActive(false);
-
-            GetComponent<Buttoninteractions>().enabled = false;
+      GetComponent<Buttoninteractions>().enabled = false;
         }
 
         if (text >= dialog)
@@ -83,7 +84,6 @@ public class Cordero_main : MonoBehaviour
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.neutral.SetActive(true);
-                cretura.neutral.SetActive(false);
                 cordero.happy.SetActive(true);
                 cordero.neutral.SetActive(false);
 
@@ -151,6 +151,8 @@ public class Cordero_main : MonoBehaviour
                 break;
 
             case 7:
+              
+
                 talking.text = (writtenDialog[w]);
                 cretura.blush.SetActive(true);
                 cretura.shock.SetActive(false);
@@ -181,6 +183,9 @@ public class Cordero_main : MonoBehaviour
 
                 break;
             case 10:
+                Vector3 position = pos.gameObject.transform.position; //Moves the player to the targeted area
+                player.gameObject.transform.position = position;
+
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 break;
@@ -264,7 +269,7 @@ public class Cordero_main : MonoBehaviour
                 talking.text = (writtenDialog[w]);
 
                 cordero.blush.SetActive(true);
-                cordero.neutral.SetActive(false);
+                cordero.disappointed.SetActive(false);
                 advance = true;
                 break;
 
@@ -495,14 +500,14 @@ public class Cordero_main : MonoBehaviour
                 talking.text = (writtenDialog[w]);
                 advance = true;
                 cretura.nervous.SetActive(true);
-                cretura.neutral.SetActive(false);
+                cretura.blush.SetActive(false);
                 break;
 
             case 40:
                 talking.text = (writtenDialog[w]);
 
                 cordero.confused.SetActive(true);
-                cordero.neutral.SetActive(false);
+                cordero.blush.SetActive(false);
                 advance = true;
                 break;
 
@@ -514,7 +519,7 @@ public class Cordero_main : MonoBehaviour
 
             case 42:
                 talking.text = (writtenDialog[w]);
-                cordero.blush.SetActive(true);
+                cordero.u_Blush.SetActive(true);
                 cordero.confused.SetActive(false);
 
                 advance = true;
@@ -528,8 +533,8 @@ public class Cordero_main : MonoBehaviour
 
             case 44:
                 talking.text = (writtenDialog[w]);
-                cordero.happy.SetActive(true);
-                cordero.blush.SetActive(false);
+                cordero.u_Happy.SetActive(true);
+                cordero.u_Blush.SetActive(false);
                 
                 advance = true;
                 break;
@@ -537,8 +542,8 @@ public class Cordero_main : MonoBehaviour
             case 45:
                 talking.text = (writtenDialog[w]);
 
-                cordero.neutral.SetActive(true);
-                cordero.happy.SetActive(false);
+                cordero.u_Neutral.SetActive(true);
+                cordero.u_Happy.SetActive(false);
 
                 advance = true;
                 break;
@@ -547,8 +552,8 @@ public class Cordero_main : MonoBehaviour
             case 46:
                 talking.text = (writtenDialog[w]);
               
-                cordero.happy.SetActive(true);
-                cordero.neutral.SetActive(false);
+                cordero.u_Happy.SetActive(true);
+                cordero.u_Neutral.SetActive(false);
                 advance = true;
 
                 break;
@@ -598,7 +603,7 @@ public class Cordero_main : MonoBehaviour
             case 50:
                 talking.text = (writtenDialog[w]);
                 cordero.confused.SetActive(true);
-                cordero.happy.SetActive(false);
+                cordero.u_Happy.SetActive(false);
 
                 //cretura frames should deactivate so we can't see cretura in the dialog menu
 
@@ -623,10 +628,19 @@ public class Cordero_main : MonoBehaviour
 
                 advance = true;
 
-                SceneManager.LoadScene("House");
+                break;
+            
+            case 54:
+                advance = true;
+                inTextBox = false;
+                textBox.gameObject.SetActive(false);
+                Buttoninteractions.OptionOne.gameObject.SetActive(false);
+                Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+                fadeToB.SetActive(true);
+                
                 break;
 
-             //add a transition to black, then you return home
+            //add a transition to black, then you return home
 
 
 

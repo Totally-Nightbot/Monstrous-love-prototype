@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 //this script is for the intro of cordero's date, so inside the house before going to the restuarant, talking to spinch as cordero
 public class Spinch_to_cordi : MonoBehaviour
 
@@ -22,6 +23,9 @@ public class Spinch_to_cordi : MonoBehaviour
 
     [SerializeField] private GameObject spinch_home;
 
+    private bool notdo;
+    public GameObject bgin;
+    public GameObject bgout;
     public GameObject mainCanvas;
     public GameObject minigameCanvas;
     public GameObject textBox;
@@ -109,15 +113,31 @@ public class Spinch_to_cordi : MonoBehaviour
                 textBox.gameObject.SetActive(false);
                 Buttoninteractions.OptionOne.gameObject.SetActive(false);
                 Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-                mainCanvas.SetActive(false);
-                minigameCanvas.SetActive(true);
+                if(notdo == false)
+                {
+                    bgin.SetActive(true);
+                    Invoke("Minigame", 2);
+                }
+                
+              
 
                 break;
                 //dress up minigame occurs here, i will consider it as one script but if we need to it should be easy to alter//
         } 
-           
+          
+    }
+
+    void Minigame()
+    {
+        bgout.SetActive(false);
+        bgout.SetActive(true);
+        mainCanvas.SetActive(false);
+        minigameCanvas.SetActive(true);
+        bgin.SetActive(false);
+        notdo = true;
 
     }
+
 
 
     void EnterInteract()// for when the player enters, exits and advances dialog

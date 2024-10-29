@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class TitlescreenUI : MonoBehaviour
 {
     public Button settings;
@@ -12,6 +13,7 @@ public class TitlescreenUI : MonoBehaviour
     public Button chapterSelect;
     public Button back;
 
+    public GameObject bg;
     public GameObject titleScreen;
     public GameObject chapterScreen;
     public GameObject settingsMenu;
@@ -49,8 +51,15 @@ public class TitlescreenUI : MonoBehaviour
 
     void startClicked()
     {
-        SceneManager.LoadScene("resturant final scene");
+        bg.SetActive(true);
+        Invoke("MoveScene", 2.0f);
     }
+
+    void MoveScene()
+    {
+        SceneManager.LoadScene("House");
+    }
+
 
     void exitClicked()
     {
