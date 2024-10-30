@@ -247,7 +247,7 @@ public class Plant_1_cordi : MonoBehaviour
             textBox.gameObject.SetActive(true);
         }
 
-        if (Input.GetButtonDown("Submit") && choice == false && text < dialog)//sets it to false when they press enter and progresses the step number
+        if (Input.GetButtonDown("Submit") && inTextBox == true && choice == false && text < dialog)//sets it to false when they press enter and progresses the step number
         {
             text++;
             w++;
