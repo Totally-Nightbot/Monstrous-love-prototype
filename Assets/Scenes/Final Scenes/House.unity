@@ -18374,23 +18374,25 @@ MonoBehaviour:
   spinch: {fileID: 6365061516381057727}
   inTextBox: 0
   writtenDialog:
-  - "Good morning, what a lovely morning it is wouldn\u2019t you agree?"
+  - Good morning, my leafy friend! What a gorgeous sunrise from our barely lit abode,
+    wouldn't you agree?
   - "I see you\u2019re as quiet as ever aren\u2019t you, no matter! "
-  - I have a proposition for you
-  - you wanted to go to the human world once right?
-  - ..
-  - come now, no need to be shy, there is no need to worry about it anymore
-  - "I\u2019ve managed to set up a \u2018date\u2019 as they call it for you with
-    two different people, humans"
-  - " I know you\u2019ve wanted to \u2018become\u2019 human for arguably centuries
-    so I have Acquired this opportunity for you"
-  - 'Now, decide which companion you would like to have a marvellous adventure with!  '
+  - I have a proposition for you.
+  - You wanted to go to the human world once, correct?
+  - ...
+  - Come now, no need to be shy! I have found the perfect method of trying to integrate
+    you into society.
+  - After countless hours of research, I have found there is no better way than to
+    send you on a date!
+  - Taking that plunge with your leafy self will surely give you the confidence to
+    be percieved.
+  - I have accquired two potential matches for you to choose from. Have a look!
   dialogOptions1:
   - 
   - ......
   dialogOptions2:
   - 
-  - ......................................
+  - '[Stare blankly.]'
   spinch_home: {fileID: 3634928001127484932}
   dateUI: {fileID: 65953867}
   textBox: {fileID: 6365061516732155725}
@@ -18419,8 +18421,8 @@ MonoBehaviour:
   writtenDialog:
   - What an excellent choice!
   - Now, we shall make you look absolutely stunning for your outing!
-  - " You\u2019ll be meeting them at a restaurant, so I believe you should dress
-    for the occasion ."
+  - "You\u2019ll be meeting them at a restaurant, so I believe you should dress for
+    the occasion ."
   - I humbly request that you try on some positively dazzling outfits I have prepared
     for you. They shall make you look as bright and lively as a star.
   - Choose whatever you think will look best on your stunning leafy form.
@@ -18461,17 +18463,17 @@ MonoBehaviour:
   - "\u2026adequate\u2026"
   - "\u2026"
   - I think the most vital part is going out as yourself, yes?
-  - ' Come, dear, it will be fine! You are an absolutely spectacular anthropomorphic
-    leaf creature with an even more spectacular judge of character.'
+  - Come, dear, it will be fine! You are an absolutely spectacular anthropomorphic
+    leaf creature with an even more spectacular judge of character.
   - Just enjoy your date.
   - Now look at you! Perfect.
   - Hm, should we give you a cut with those hedge trimmers..?
   - Nay! You are perfection.
-  - " Let us travel to the restaurant post-haste! But, first\u2026"
+  - "Let us travel to the restaurant post-haste! But, first\u2026"
   - '[You feel a swirl of magic surround you; a warm breeze that hugs tight and comforts
     you. It stirs your leaves, but settles shortly after.]'
   - "\u2026A little trick to help you not stand out. "
-  - ' Now, let us depart!'
+  - Now, let us depart!
   dialogOptions1: []
   dialogOptions2: []
   spinch_home: {fileID: 3634928001127484932}

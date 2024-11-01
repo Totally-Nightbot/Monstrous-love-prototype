@@ -2292,7 +2292,7 @@ MonoBehaviour:
   - "Now, I\u2019ve told you all I\u2019ve scouted."
   - "Talk to my companions, quick! We\u2019re required elsewhere later for Spinch
     Her Excellency. "
-  - ' GO! We CANNOT keep her waiting! '
+  - 'GO! We CANNOT keep her waiting! '
   dialogOptions1:
   - 
   - '[Act.. natural?]'
@@ -4044,11 +4044,11 @@ MonoBehaviour:
   - 'We have arrived! Quite a fine establishment, oh-so similar to one we visited
     back when you were once the size of the leaf bestowed upon my head.. How time
     flies, does it not? '
-  - '  Sure, I may not be as finely aged as you are, but I certainly have spent more
-    of my time perusing the human world.'
-  - " I\u2019m not quite sure if they have figured out how to put human restaurants
+  - Sure, I may not be as finely aged as you are, but I certainly have spent more
+    of my time perusing the human world.
+  - "I\u2019m not quite sure if they have figured out how to put human restaurants
     beyond the mortal plane.. but, let us head inside! I have something to show you."
-  - " Now, you might be wondering why I am still here in your presence instead of
+  - "Now, you might be wondering why I am still here in your presence instead of
     just leaving it to you, well\u2026"
   - "I may or may not have \u2018planted\u2019 some \u2018security\u2019 around your
     date Cordero for the last few days in the case you wanted to go out with them.
@@ -4061,11 +4061,11 @@ MonoBehaviour:
   - 'And with that, I bid you farewell. Have a wondrous time on your outing! '
   dialogOptions1:
   - 
-  - " But you\u2019re not older than me.. "
+  - "But you\u2019re not older than me.. "
   - Did you stalk my date?
   dialogOptions2:
   - 
-  - " I wonder if it\u2019s the same chain we have back at home."
+  - "I wonder if it\u2019s the same chain we have back at home."
   - Perfectly reasonable.
   Test_NPC_spinch: {fileID: 725266105}
   plant1_NPC: {fileID: 406011118}
@@ -5833,15 +5833,15 @@ MonoBehaviour:
   - "[The plant\u2019s leaves shudder slightly in disgust.]"
   - Fine.
   - "I was tasked with acting as a house plant in the target\u2019s living quarters."
-  - ' It was a rough few weeks out in the field, I was sent in a task force with
-    some of the best.. '
+  - 'It was a rough few weeks out in the field, I was sent in a task force with some
+    of the best.. '
   - I was the only survivor.
   - "It was warfare out there, with no rations to spare.. I watched my friends die
     without a lick of water or sunlight for days\u2026"
   - "I\u2019ll never forget the dying words of my comrade as I sat in my pot by the
     windowsill next to them\u2026"
   - "\u201CW\u2026water your damn plants\u2026\u201D"
-  - ' [A moment of silence passes in respect of the fallen plant.] '
+  - '[A moment of silence passes in respect of the fallen plant.] '
   - Cordero seems to be the overly confident type. Almost to a fault, considering
     the outcomes of the field mission.
   - 'You could use that to your advantage: a stray compliment or two will certainly
@@ -9660,7 +9660,7 @@ MonoBehaviour:
   cordero: {fileID: 333819469}
   inTextBox: 0
   writtenDialog:
-  - " Oh, hey! It\u2019s you. Great to finally see you in person."
+  - "Oh, hey! It\u2019s you. Great to finally see you in person."
   - 'Have a seat! '
   - '[You grab the seat in front of you with a pair of gooey limbs. Without any further
     direction, you simply lift and hold it in your arms.]'
@@ -9678,7 +9678,7 @@ MonoBehaviour:
   - "Hm. I would\u2019ve gone for the veggie tart, but whatever suits your palate.."
   - "[Cordero looks off to the side of the table. It seems that you two don\u2019t
     share similar tastes..] "
-  - " Oh, what a choice! Love me some goat cheese\u2026"
+  - "Oh, what a choice! Love me some goat cheese\u2026"
   - "[It seems Cordero\u2019s more inclined to talk with you.]"
   - Oop! Almost forgot!
   - What are you feeling for starters?
@@ -9704,17 +9704,17 @@ MonoBehaviour:
   - '[Uh oh.'
   - You feel beads of sweat begin to form from your leafy pores.]
   - 'I like that about you. '
-  - " But I think it\u2019d be good to know basics, yeah? Like.. what do you do for
+  - "But I think it\u2019d be good to know basics, yeah? Like.. what do you do for
     fun?"
   - '[You wrack your brain for the most normal hobby you enjoy.]'
-  - " That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
+  - "That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
     by chance?"
   - "HAH! Oh, imagine.. that\u2019d be cool, though."
   - "[You\u2019re reminded of your chess match with Bigfoot Brian last Tuesday."
   - The nervous feeling intensifies. Your leaves begin to tremble slightly.
   - Are they onto you?
   - You should figure out a way to leave before your cover is blown.]
-  - ' Speaking of, how much do you know about cryptids?'
+  - Speaking of, how much do you know about cryptids?
   - Mothman? Chupacabra? Nessie?
   - If you were a cryptid, which one would you be?
   - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
