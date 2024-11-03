@@ -1860,8 +1860,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Made with a monstrous amount of love by:\n\nJayden Cassar:  Programmer\nDan
-    Moore: 2D Artist\nKai Torres Wong:  3D Artist \nMathew Lambeth:  Designer\n-music
-    was taken from club penguin\n\nWe hope you enjoyed!\n\n"
+    Moore: 2D Artist\nKai Torres Wong:  3D Artist \nMathew Lambeth:  Designer and
+    sfx\n-music was taken from club penguin\n\nWe hope you enjoyed!\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 963c4e73e402ef54492d9fb4795f1e36, type: 2}
   m_sharedMaterial: {fileID: -201764910043142591, guid: 963c4e73e402ef54492d9fb4795f1e36, type: 2}
