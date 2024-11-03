@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028456, g: 0.22571597, b: 0.3069237, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028435, g: 0.22571553, b: 0.30692297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1819,13 +1819,13 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87353957}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2435501539703051755, guid: 266afae11fdaecc4db6e831d2f4c39c9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7127d1f1fa5310d4b8eed8781dfe6336, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.218
-  m_Pitch: 0.94
+  m_Volume: 0.425
+  m_Pitch: 3
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1834,7 +1834,7 @@ AudioSource:
   DopplerLevel: 0.82
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.1
+  Pan2D: 0.45
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1868,7 +1868,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.181
+      value: 0.328
       inSlope: 0
       outSlope: 0
       tangentMode: 0

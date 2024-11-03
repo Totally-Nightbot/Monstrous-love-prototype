@@ -38,6 +38,9 @@ public class Cordero_main : MonoBehaviour
     public Buttoninteractions Buttoninteractions;
     public GameObject floatingBubble;
     public GameObject fadeToB;
+    public AudioSource exception1; //exceptions are needed to mute audio at the end
+    public AudioSource exception2;
+
 
     private int text = 1;
     private int w = 0;
@@ -636,6 +639,8 @@ public class Cordero_main : MonoBehaviour
                 textBox.gameObject.SetActive(false);
                 Buttoninteractions.OptionOne.gameObject.SetActive(false);
                 Buttoninteractions.OptionTwo.gameObject.SetActive(false);
+                MuteAllAudioExceptExceptions();
+
                 fadeToB.SetActive(true);
                 
                 break;
@@ -652,7 +657,21 @@ public class Cordero_main : MonoBehaviour
         }
 
     }
+    void MuteAllAudioExceptExceptions()
+    {
+        // Get all AudioSource components in the scene and search them
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
 
+       
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            
+            if (audioSource != exception1 && audioSource != exception2)
+            {
+                audioSource.mute = true; // Deactivate the audio
+            }
+        }
+    }
 
     void EnterInteract()// for when the player enters, exits and advances dialog
     {

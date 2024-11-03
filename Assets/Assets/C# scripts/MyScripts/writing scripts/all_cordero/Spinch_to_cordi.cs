@@ -108,23 +108,23 @@ public class Spinch_to_cordi : MonoBehaviour
                 advance = true;
 
                 break;
-           
+
             case 6:
                 textBox.gameObject.SetActive(false);
                 Buttoninteractions.OptionOne.gameObject.SetActive(false);
                 Buttoninteractions.OptionTwo.gameObject.SetActive(false);
-                if(notdo == false)
+                if (notdo == false)
                 {
                     bgin.SetActive(true);
                     Invoke("Minigame", 2);
                 }
-                
-              
+
+
 
                 break;
                 //dress up minigame occurs here, i will consider it as one script but if we need to it should be easy to alter//
-        } 
-          
+        }
+
     }
 
     void Minigame()
