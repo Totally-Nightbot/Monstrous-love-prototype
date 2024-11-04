@@ -16,7 +16,7 @@ public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
        // Debug.Log("onBeginDrag");
 
-        parentToReturnTo = this.transform.parent;
+        parentToReturnTo = this.transform.parent; //sets the parent that it will return back to
         this.transform.SetParent(this.transform.parent.parent);
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -25,14 +25,14 @@ public class dragabble: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
        // Debug.Log("onDrag");
 
-        this.transform.position = eventData.position;
+        this.transform.position = eventData.position; //changes the position of the card to the location of the mouse
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("onEndDrag");
-        this.transform.SetParent(parentToReturnTo);
+        this.transform.SetParent(parentToReturnTo); //returns to the parent (if this object is over the dropzone then returns to that)
         GetComponent<CanvasGroup>().blocksRaycasts = true;
 
 
