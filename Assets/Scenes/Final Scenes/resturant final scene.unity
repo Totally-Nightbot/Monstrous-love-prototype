@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.03302308, g: 0.025527326, b: 0.015279179, a: 1}
+  m_IndirectSpecularColor: {r: 0.033023104, g: 0.025527336, b: 0.01527917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2276,9 +2276,9 @@ MonoBehaviour:
     will be BUSTED! "
   - Act. Natural.
   - '[You act as natural as you can possibly conceive: pretending you are a tree,
-    gently swaying in the wind.'
-  - Despite how calm and graceful you feel, you see an onlooking couple stare at
-    you before hurriedly walking into the restaurant.]
+    gently swaying in the wind.]'
+  - '[Despite how calm and graceful you feel, you see an onlooking couple stare at
+    you before hurriedly walking into the restaurant.]'
   - "Wh\u2014what are you DOING?! I said act NATURAL. Ugh. Fine. I\u2019ll give you
     the intel before you take MY cover down with yours. "
   - '[The plant sighs. You have no idea how it did that.]'
@@ -11376,14 +11376,14 @@ MonoBehaviour:
   - "[It seems Cordero\u2019s more inclined to talk with you.]"
   - Oop! Almost forgot!
   - What are you feeling for starters?
-  - '[You eye the fruits curiously, set aside on the table by the wall. '
-  - "Picking one up between your lustrous, slimy hand, you admire a perfect, shining
+  - '[You eye the fruits curiously, set aside on the table by the wall.] '
+  - "[Picking one up between your lustrous, slimy hand, you admire a perfect, shining
     red apple. It glints in the faint moody lighting, a gorgeous waxy sheen over
-    it\u2019s unblemished surface."
-  - You take a bite into the supple flesh of the fruit, awaiting for the sweet taste
-    to fill your leafy maw as the apple crunches under your many sharp teeth.
-  - "It\u2019s styrofoam."
-  - Cordero erupts with laughter, almost choking on her table water.]
+    it\u2019s unblemished surface.]"
+  - '[You take a bite into the supple flesh of the fruit, awaiting for the sweet
+    taste to fill your leafy maw as the apple crunches under your many sharp teeth.]'
+  - "[It\u2019s styrofoam.]"
+  - '[Cordero erupts with laughter, almost choking on her table water.]'
   - Did you actually eat the decorative fruit? HAH! HAHA!
   - "[Cordero\u2019s laughs subside slightly, slapping their hand against the table
     with a clink of the cutlery before calming down.]"
@@ -11395,8 +11395,8 @@ MonoBehaviour:
     now."
   - "I think I\u2019m quite interested in you, honestly. You seem mysterious\u2026
     ominous even"
-  - '[Uh oh.'
-  - You feel beads of sweat begin to form from your leafy pores.]
+  - '[Uh oh.]'
+  - '[You feel beads of sweat begin to form from your leafy pores.]'
   - 'I like that about you. '
   - "But I think it\u2019d be good to know basics, yeah? Like.. what do you do for
     fun?"
@@ -11404,22 +11404,22 @@ MonoBehaviour:
   - "That\u2019s quite the cryptic response. Like, do you share hobbies with Bigfoot
     by chance?"
   - "HAH! Oh, imagine.. that\u2019d be cool, though."
-  - "[You\u2019re reminded of your chess match with Bigfoot Brian last Tuesday."
-  - The nervous feeling intensifies. Your leaves begin to tremble slightly.
-  - Are they onto you?
-  - You should figure out a way to leave before your cover is blown.]
+  - "[You\u2019re reminded of your chess match with Bigfoot Brian last Tuesday.]"
+  - '[The nervous feeling intensifies. Your leaves begin to tremble slightly.]'
+  - '[Are they onto you?]'
+  - '[You should figure out a way to leave before your cover is blown.]'
   - Speaking of, how much do you know about cryptids?
   - Mothman? Chupacabra? Nessie?
   - If you were a cryptid, which one would you be?
   - "I\u2019d definitely be the chupacabra. Mysterious, and I reckon I could stomach
     the diet\u2026"
-  - '[She knows too much.'
-  - Quick. Figure out a way to escape.]
+  - '[She knows too much.]'
+  - '[Quick. Figure out a way to escape.]'
   - "Oh\u2014 huh? "
   - '[You quickly stand and slink away from the table before breaking into a sprint,
-    almost toppling a waiter with your main meals.'
-  - You run out of the restaurant, off into the alleyway to return home.
-  - Well, you kept your true identity safe.. but at what cost?
+    almost toppling a waiter with your main meals.]'
+  - '[You run out of the restaurant, off into the alleyway to return home.]'
+  - '[Well, you kept your true identity safe.. but at what cost?]'
   dialogOptions1:
   - 
   - '[have a seat]'
