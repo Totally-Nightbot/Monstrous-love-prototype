@@ -18,8 +18,8 @@ public class PhoneMenu: MonoBehaviour
 
     void Start() //when these buttons are clicked they send out a message to the diffrent recivers 
     {
-        Button op1 = settings.GetComponent<Button>();
-        op1.onClick.AddListener(settingsClicked);
+       // Button op1 = settings.GetComponent<Button>();
+       // op1.onClick.AddListener(settingsClicked);
 
         Button op2 = resume.GetComponent<Button>();
         op2.onClick.AddListener(resumeClicked);
